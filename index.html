@@ -1,112 +1,49 @@
-import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { motion } from "framer-motion";
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage - Claire & Thomas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-export default function MariageSite() {
-  const [formData, setFormData] = useState({
-    nom: "",
-    email: "",
-    presence: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Merci pour votre réponse !\n\n" + JSON.stringify(formData, null, 2));
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-100 to-pink-200 flex flex-col items-center p-6">
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-6"
-      >
-        💍 Mariage de Claire & Thomas
-      </motion.h1>
-
-      <Card className="w-full max-w-2xl mb-8 rounded-2xl shadow-xl">
-        <CardContent className="p-6 space-y-4">
-          <h2 className="text-2xl font-semibold">📅 Informations</h2>
-          <p><strong>Date :</strong> 12 Juin 2027</p>
-          <p><strong>Lieu :</strong> Château de la Roseraie, Provence</p>
-          <p><strong>Heure :</strong> 15h00</p>
-          <p>
-            Nous avons le plaisir de vous inviter à célébrer notre union.
-            Merci de confirmer votre présence ci-dessous.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card className="w-full max-w-2xl rounded-2xl shadow-xl">
-        <CardContent className="p-6">
-          <h2 className="text-2xl font-semibold mb-4">🎉 Confirmation de présence</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Label>Nom et Prénom</Label>
-              <Input
-                name="nom"
-                value={formData.nom}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <Label>Email</Label>
-              <Input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-            </div>
-
-            <div>
-              <Label>Votre réponse</Label>
-              <select
-                name="presence"
-                value={formData.presence}
-                onChange={handleChange}
-                required
-                className="w-full border rounded-xl p-2"
-              >
-                <option value="">-- Sélectionner --</option>
-                <option value="oui">Oui, je serai présent(e)</option>
-                <option value="non">Non, je ne pourrai pas venir</option>
-              </select>
-            </div>
-
-            <div>
-              <Label>Message (optionnel)</Label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full border rounded-xl p-2"
-                rows={3}
-              />
-            </div>
-
-            <Button type="submit" className="w-full rounded-2xl text-lg">
-              Envoyer ma réponse
-            </Button>
-          </form>
-        </CardContent>
-      </Card>
-
-      <footer className="mt-10 text-sm text-gray-600">
-        © 2027 Claire & Thomas – Merci de partager ce moment avec nous
-      </footer>
+<header class="hero">
+    <div class="overlay">
+        <h1>Claire & Thomas</h1>
+        <p>Nous nous marions !</p>
+        <p class="date">12 Juin 2027</p>
     </div>
-  );
-}
+</header>
+
+<section class="info">
+    <h2>Informations</h2>
+    <p><strong>Date :</strong> 12 Juin 2027</p>
+    <p><strong>Heure :</strong> 15h00</p>
+    <p><strong>Lieu :</strong> Château de la Roseraie, Provence</p>
+</section>
+
+<section class="rsvp">
+    <h2>Confirmation de présence</h2>
+    <form action="contact.php" method="POST">
+        <input type="text" name="nom" placeholder="Nom et prénom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        
+        <select name="presence" required>
+            <option value="">-- Votre réponse --</option>
+            <option value="Oui">Oui, je serai présent(e)</option>
+            <option value="Non">Non, je ne pourrai pas venir</option>
+        </select>
+
+        <textarea name="message" placeholder="Message (optionnel)"></textarea>
+
+        <button type="submit">Envoyer ma réponse</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2027 Claire & Thomas</p>
+</footer>
+
+</body>
+</html>
