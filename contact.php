@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $presence = htmlspecialchars($_POST['presence']);
     $message = htmlspecialchars($_POST['message']);
 
-    $to = "tonemail@example.com"; // Remplace par ton email
+    $to = "pinsourir@gmail.com"; // Remplace par ton email
     $subject = "Confirmation de présence - Mariage";
     $body = "Nom: $nom\n";
     $body .= "Email: $email\n";
