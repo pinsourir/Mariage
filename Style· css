@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff5f8;
+    color: #333;
+    text-align: center;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486') center/cover no-repeat;
+    height: 80vh;
+    position: relative;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.date {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+.info {
+    background: white;
+}
+
+.rsvp {
+    background: #ffe3ec;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #d63384;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #b0256b;
+}
+
+footer {
+    padding: 20px;
+    background: #d63384;
+    color: white;
+}
