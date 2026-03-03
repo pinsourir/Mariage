@@ -39,9 +39,9 @@ section {
 .info {
     background: white;
 }
-
+/*fond Confirmation de présence*/
 .rsvp {
-    background: #ffe3ec;
+    background: #dcc5fc;
 }
 
 form {
@@ -70,9 +70,9 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+/*button:hover {
     background-color: #dcc5fc;
-}
+}*/
 
 footer {
     padding: 20px;
