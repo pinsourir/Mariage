@@ -70,12 +70,12 @@ button {
     transition: 0.3s;
 }
 
-/*button:hover {
+button:hover {
     background-color: #dcc5fc;
-}*/
+}
 
-/*footer {
+footer {
     padding: 20px;
     background: #c499ff;
     color: white;
-}*/
+}
