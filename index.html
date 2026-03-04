@@ -35,6 +35,17 @@
     </div>
 </header>
 
+<!-- ===== COMPTE À REBOURS ===== -->
+<section class="countdown-section">
+    <h2>Le grand jour approche 💍</h2>
+    <div id="countdown" class="countdown">
+        <div><span id="days">0</span><p>Jours</p></div>
+        <div><span id="hours">0</span><p>Heures</p></div>
+        <div><span id="minutes">0</span><p>Minutes</p></div>
+        <div><span id="seconds">0</span><p>Secondes</p></div>
+    </div>
+</section>
+    
 <!-- ===== 2. NOTRE HISTOIRE ===== -->
 <section id="histoire" class="section-white">
     <h2>Notre histoire</h2>
@@ -171,6 +182,29 @@
 <footer>
     <p>© 2027 Alicia & Bruno</p>
 </footer>
+<script>
+// Date du mariage : 26 août 2027 à 15h00
+const weddingDate = new Date("August 26, 2027 15:00:00").getTime();
 
+const countdown = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "C'est le grand jour ! 🎉";
+    }
+}, 1000);
+</script>
 </body>
 </html>
