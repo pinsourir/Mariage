@@ -40,13 +40,14 @@ nav {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 35px;
+    gap: 70px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #a88bd6;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 /* bouton hamburger caché sur ordinateur */
