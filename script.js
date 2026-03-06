@@ -60,14 +60,13 @@ setInterval(function() {
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
-// Ouvre/Ferme le menu au clic sur le burger
-hamburger.addEventListener("click", () => {
+hamburger.onclick = function() {
     navLinks.classList.toggle("open");
-});
+}
 
-// Ferme le menu quand on clique sur un lien (pour mobile)
+// Ferme le menu si on clique sur un lien (pratique sur tel)
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-    });
+    link.onclick = () => {
+        navLinks.classList.remove("open");
+    };
 });
