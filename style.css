@@ -58,6 +58,42 @@ body {
     margin: 4px 0;
     border-radius: 3px;
 }
+/* ===== VERSION MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+
+        position: absolute;
+        top: 60px;
+        right: 0;
+
+        background: white;
+
+        flex-direction: column;
+        width: 100%;
+
+        text-align: center;
+
+        max-height: 0;
+        overflow: hidden;
+
+        transition: max-height 0.4s ease;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .nav-links.open {
+        max-height: 500px;
+    }
+
+}
 
 /* ===== HERO ===== */
 .hero {
