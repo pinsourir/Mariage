@@ -8,39 +8,84 @@ body {
     scroll-behavior: smooth; /* Scroll fluide */
 }
 
-/* ===== NAVBAR ===== */ 
-.navbar { 
-    position: fixed;
-    width: 100%; 
-    background: white; 
-    padding: 15px; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-    z-index: 1000; 
-} 
-.navbar a { 
-    margin: 0 15px; 
-    text-decoration: none; 
-    color: #c499ff; 
-    font-weight: bold; 
-}
-/* ===== BANDEAU NAVIGATION ===== */
-
+/* ===== NAVIGATION UNIQUE ===== */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #a88bd6; /* couleur du bandeau */
-    padding: 15px 40px;
+    background: white; /* Fond blanc comme sur la photo */
+    padding: 15px 0;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-}
-
-nav {
     display: flex;
-    justify-content: center; /* centre les liens */
+    justify-content: center; /* Centre les liens comme sur la photo */
     align-items: center;
 }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px; /* Espace entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #c499ff; /* Le violet de ta photo */
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a88bd6;
+}
+
+/* bouton hamburger caché par défaut */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #c499ff;
+    position: absolute;
+    right: 20px;
+}
+
+/* ===== VERSION MOBILE (Rupture à 768px) ===== */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: flex-end; /* Aligne le burger à droite */
+        padding: 15px 20px;
+    }
+
+    .hamburger {
+        display: block; /* Affiche le burger */
+    }
+
+    .nav-links {
+        display: none; /* Cache les liens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Juste en dessous de la barre */
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        gap: 20px;
+    }
+
+    .nav-links.open {
+        display: flex; /* Affiche quand on clique */
+    }
+}
+
+/* Ajoute une marge au body pour ne pas que le contenu passe sous la navbar fixe */
+body {
+    padding-top: 60px;
+}
 /* menu */
 .nav-links {
     display: flex;
