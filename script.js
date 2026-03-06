@@ -57,11 +57,17 @@ setInterval(function() {
 
 }, 1000);
 
-// ===== MENU HAMBURGER =====
-
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
 
-hamburger.addEventListener("click", function() {
+// Ouvre/Ferme le menu au clic sur le burger
+hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("open");
+});
+
+// Ferme le menu quand on clique sur un lien (pour mobile)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+    });
 });
