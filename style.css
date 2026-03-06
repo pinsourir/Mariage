@@ -8,68 +8,89 @@ body {
     scroll-behavior: smooth; /* Scroll fluide */
 }
 
-/* ===== NAVIGATION UNIQUE ===== */
+/* Nettoyage des marges par défaut qui créent le "trait rose" */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVBAR FIXE */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: white; /* Fond blanc comme sur la photo */
-    padding: 15px 0;
+    background: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centré sur PC */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    display: flex;
-    justify-content: center; /* Centre les liens comme sur la photo */
-    align-items: center;
+    padding: 0 20px;
 }
 
+/* LIENS (PC) */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px; /* Espace entre les liens */
-    margin: 0;
-    padding: 0;
+    gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #c499ff; /* Le violet de ta photo */
+    color: #c499ff; /* Violet de base */
     font-weight: bold;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
+/* Effet au survol (Souris) */
 .nav-links a:hover {
-    color: #a88bd6;
+    color: #8a5fd3; /* Violet plus foncé */
 }
 
-/* ===== BOUTON HAMBURGER CORRIGÉ ===== */
+/* HAMBURGER */
 .hamburger {
-    display: none; /* Caché sur ordinateur */
-    font-size: 32px; /* Plus grand pour être facile à cliquer */
+    display: none; /* Caché sur PC */
+    font-size: 30px;
     cursor: pointer;
-    color: #c499ff !important; /* Force la couleur violette pour qu'elle soit visible */
-    position: absolute;
-    right: 20px; /* Aligné à droite */
-    top: 50%;
-    transform: translateY(-50%); /* Centre verticalement dans la barre blanche */
-    z-index: 1001;
+    color: #c499ff;
     user-select: none;
 }
 
+/* ===== MOBILE (Max 768px) ===== */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Visible sur mobile */
+    .navbar {
+        justify-content: flex-end; /* Burger à droite sur mobile */
     }
 
-    .navbar {
-        height: 60px; /* Fixe la hauteur de la barre pour éviter les barres bizarres */
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
+    .hamburger {
+        display: block;
+        margin-right: 10px; /* Évite qu'il soit collé au bord */
+    }
+
+    .nav-links {
+        display: none; /* Cache le menu */
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.open {
+        display: flex; /* S'affiche quand on clique */
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
     }
 }
-
 /* Ajoute une marge au body pour ne pas que le contenu passe sous la navbar fixe */
 body {
     padding-top: 60px;
