@@ -81,9 +81,7 @@ nav {
         display: flex;
     }
 }
-body{
-    padding-top:70px;
-}
+
 /* ===== HERO ===== */
 .hero {
     background: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486') center/cover no-repeat;
