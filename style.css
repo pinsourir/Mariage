@@ -42,43 +42,31 @@ body {
     color: #a88bd6;
 }
 
-/* bouton hamburger caché par défaut */
+/* ===== BOUTON HAMBURGER CORRIGÉ ===== */
 .hamburger {
-    display: none;
-    font-size: 28px;
+    display: none; /* Caché sur ordinateur */
+    font-size: 32px; /* Plus grand pour être facile à cliquer */
     cursor: pointer;
-    color: #c499ff;
+    color: #c499ff !important; /* Force la couleur violette pour qu'elle soit visible */
     position: absolute;
-    right: 20px;
+    right: 20px; /* Aligné à droite */
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement dans la barre blanche */
+    z-index: 1001;
+    user-select: none;
 }
 
-/* ===== VERSION MOBILE (Rupture à 768px) ===== */
 @media (max-width: 768px) {
-    .navbar {
-        justify-content: flex-end; /* Aligne le burger à droite */
-        padding: 15px 20px;
-    }
-
     .hamburger {
-        display: block; /* Affiche le burger */
+        display: block; /* Visible sur mobile */
     }
 
-    .nav-links {
-        display: none; /* Cache les liens */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Juste en dessous de la barre */
-        left: 0;
-        width: 100%;
-        background: white;
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        gap: 20px;
-    }
-
-    .nav-links.open {
-        display: flex; /* Affiche quand on clique */
+    .navbar {
+        height: 60px; /* Fixe la hauteur de la barre pour éviter les barres bizarres */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
     }
 }
 
