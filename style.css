@@ -24,7 +24,21 @@ body {
     color: #c499ff;
     font-weight: bold;
 }
+/* ===== HAMBURGER ===== */
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin: 4px 0;
+    border-radius: 3px;
+}
 /* ===== HERO ===== */
 .hero {
     background: url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486') center/cover no-repeat;
