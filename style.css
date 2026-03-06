@@ -24,30 +24,29 @@ body {
     color: #c499ff;
     font-weight: bold;
 }
-/* ===== BANDEAU NAVIGATION ===== */
 
-.navbar {
-    background: #c499ff; /* même couleur que ton site */
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* ===== BANDEAU NAVIGATION ===== */
+header {
+    background: #a88bd6;
+    padding: 15px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 40px; /* espace entre les mots */
-    margin: 0;
-    padding: 0;
+    list-style: none;
+    gap: 35px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: white;
-    font-weight: bold; /* texte en gras */
-    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* bouton hamburger caché sur ordinateur */
