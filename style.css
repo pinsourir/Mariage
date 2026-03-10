@@ -114,15 +114,28 @@ body {
     padding: 40px;
     border-radius: 10px;
 }
-
+/* Pour les grands titres romantiques (ex: Alicia & Bruno) */
 .hero h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem; /* On l'agrandit car les polices cursives paraissent plus petites */
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Un léger ombre pour la lisibilité */
+}
+
+/* Pour les sous-titres élégants */
+.countdown-title, .subtitle {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+}
+/*.hero h1 {
     font-size: 4rem;
     margin: 0;
-}
+}*/
 
-.subtitle {
+/*.subtitle {
     font-size: 1.5rem;
-}
+}*/
 
 .date {
     font-size: 1.3rem;
