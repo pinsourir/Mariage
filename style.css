@@ -64,6 +64,24 @@ body {
     }
 }
 
+/* Espacement automatique pour tous les titres et textes */
+h1, h2, h3 {
+    margin-bottom: 20px; /* Espace sous le titre */
+    margin-top: 10px;
+    font-family: 'Playfair Display', serif; /* Police classe pour TOUS les titres */
+    color: #4b2e83; /* Violet foncé pour le contraste */
+}
+
+p {
+    margin-bottom: 15px; /* Espace entre les paragraphes */
+    line-height: 1.6;    /* Plus d'espace entre les lignes de texte */
+}
+
+/* Cas particulier pour le Menu (ton image) */
+#menu p {
+    font-weight: bold;
+    margin: 10px 0;
+}
 
 /* ===== HERO ===== */
 .hero {
