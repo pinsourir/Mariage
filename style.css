@@ -54,15 +54,18 @@ body {
 }
 
 /* BOUTON HAMBURGER (Caché sur ordi) */
+/* On s'assure que le bouton ne subit pas les marges des titres/textes */
 .hamburger {
     display: none; 
-    font-size: 32px;
+    font-size: 30px;
     cursor: pointer;
-    color: #c499ff !important;
-    user-select: none;
-    /* On le force à droite */
-    position: absolute;
+    color: #c499ff;
+    position: absolute; /* Il sort du flux pour ne plus être poussé */
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* Centrage vertical parfait */
+    margin: 0 !important; /* Annule tout décalage accidentel */
+    z-index: 3001;
 }
 
 /* ===== ADAPTATION MOBILE (Max 768px) ===== */
