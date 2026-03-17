@@ -8,6 +8,8 @@ body {
     color: #333;
     text-align: center;
     scroll-behavior: smooth;
+    /* Marge pour le contenu sous la navbar */
+    padding-top: 70px;
 }
 
 /* ===== NAVBAR (LA BELLE BARRE BLANCHE) ===== */
