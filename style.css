@@ -10,57 +10,81 @@ body {
     scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR (LA BELLE BARRE BLANCHE) ===== */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: white;
-    min-height: 70px; /* On utilise min-height */
+    height: 70px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centre le menu sur ordinateur */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    padding: 10px 5%;
+    z-index: 2000;
+    padding: 0 20px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    width: 100%;
-    justify-content: space-evenly;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
-/* TITRE ALICIA & BRUNO AVEC POLICE CALLIGRAPHIQUE */
-.hero h1 {
-    font-family: 'Great Vibes', cursive !important;
-    font-size: 5rem;
-    color: white;
+.nav-links a {
+    text-decoration: none;
+    color: #c499ff !important;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-/* ===== MOBILE (Correction du menu tassé) ===== */
-@media (max-width: 768px) {
+.nav-links a:hover {
+    color: #4b2e83 !important;
+}
+
+/* Bouton Hamburger (Caché par défaut sur ordi) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #c499ff;
+    position: absolute;
+    right: 20px;
+}
+
+/* ===== MODE MOBILE (ADAPTABILITÉ) ===== */
+@media (max-width: 900px) {
     .navbar {
-        flex-direction: column; /* Aligne le burger et le menu verticalement */
-        align-items: flex-end;
+        justify-content: flex-start; /* Aligne le contenu à gauche pour laisser de la place au burger à droite */
     }
 
     .hamburger {
-        display: block;
-        margin-bottom: 10px;
+        display: block; /* On affiche le bouton menu */
     }
 
     .nav-links {
-        display: none;
+        display: none; /* On cache la liste horizontale */
         flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
         width: 100%;
-        padding-bottom: 20px;
-        gap: 20px;
+        background: white;
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+        text-align: center;
     }
 
     .nav-links.open {
-        display: flex; /* Le menu prendra la place nécessaire sans être tassé */
+        display: flex; /* S'affiche quand on clique sur le burger */
     }
 }
 
