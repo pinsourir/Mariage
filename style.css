@@ -272,3 +272,29 @@ footer {
     transform: translateY(-10px);
     opacity: 0.5;
 }
+
+.carousel-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+    overflow-x: auto;
+    border-radius: 15px;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-slide {
+    display: flex;
+}
+
+.carousel-slide img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 300px;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* Cache la barre de défilement */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
