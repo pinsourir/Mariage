@@ -88,3 +88,11 @@ function moveSlide(direction) {
     const offset = -currentIndex * 100;
     slide.style.transform = `translateX(${offset}%)`;
 }
+
+//carrousel de menu ne soit pas trop géant
+.carousel-slide img {
+    width: 100%;
+    max-height: 500px; /* Évite que l'image du plat prenne tout l'écran */
+    object-fit: contain; /* Garde l'image entière sans la déformer */
+    background: #fafafa;
+}
