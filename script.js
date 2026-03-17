@@ -1,26 +1,23 @@
 // ===== COMPTE À REBOURS MARIAGE =====
 
 // Date du mariage : 26 août 2027 à 15h
-const weddingDate = new Date("August 26, 2027 15:00:00").getTime();
+// Format : Année, Mois (0-11), Jour, Heure, Minutes
+const weddingDate = new Date(2027, 7, 26, 15, 0, 0).getTime(); 
 
-// Fonction pour animer les chiffres
 function animateValue(id, value) {
-
     const element = document.getElementById(id);
+    if (!element) return; // Sécurité si l'élément n'existe pas encore
 
-    // ajoute une petite animation
+    // Si la valeur n'a pas changé, on ne fait rien pour éviter le clignotement
+    const newValue = value < 10 ? "0" + value : value;
+    if (element.innerText === newValue.toString()) return;
+
     element.classList.add("flip");
-
     setTimeout(() => {
-
-        // ajoute un 0 devant si nécessaire
-        element.innerText = value < 10 ? "0" + value : value;
-
+        element.innerText = newValue;
         element.classList.remove("flip");
-
     }, 200);
 }
-
 
 // Mise à jour toutes les secondes
 setInterval(function() {
