@@ -494,7 +494,7 @@ body {
 /* ===== ADAPTATION MOBILE (Max 768px) ===== */
 @media (max-width: 768px) {
     .navbar {
-        justify-content: flex-start; /* Aligne le contenu au début */
+        justify-content: flex-end; /* Aligne le contenu au début */
     }
 
     .hamburger {
