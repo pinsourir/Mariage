@@ -39,126 +39,75 @@ body {
     transition: 0.3s;
 }
 
-/* 3. LOGO ET HAMBURGER (Base) */
+/* ==========================================================
+   3. LOGO (À GAUCHE) & HAMBURGER (À DROITE)
+   ========================================================== */
+
+/* LE LOGO "AB" : On le fixe à gauche pour qu'il ne gène pas les liens */
 .nav-logo-container {
     position: absolute;
-    right: 80px; /* Place pour le burger */
+    left: 15px; /* Toujours à gauche */
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    z-index: 1001;
 }
 
-.nav-logo { height: 45px; width: auto; }
+.nav-logo { 
+    height: 55px; /* Taille contrôlée pour ne pas déborder */
+    width: auto; 
+    object-fit: contain;
+    /* mix-blend-mode: multiply; -> À utiliser seulement si le fond du logo est blanc */
+}
 
+/* LE BOUTON BURGER : On le fixe à droite */
 .hamburger {
-    display: none; /* Caché sur ordi */
+    display: none; /* Caché sur ordinateur */
     font-size: 30px;
     cursor: pointer;
     color: #c499ff;
-    position: fixed;
-    right: 15px; top: 15px;
-    z-index: 5000;
-    background: white;
-    padding: 5px;
-    border-radius: 5px;
+    position: absolute;
+    right: 15px; /* Toujours à droite */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5001;
 }
 
-/* 4. ADAPTATION MOBILE (Tout en bas du fichier) */
+/* ==========================================================
+   4. ADAPTATION MOBILE (MAX 900px)
+   ========================================================== */
 @media (max-width: 900px) {
     .hamburger {
-        display: block !important;
+        display: block !important; /* Le burger apparaît sur tel */
     }
 
     .nav-links {
-        display: none; /* Caché par défaut */
+        display: none; 
         flex-direction: column;
         position: fixed;
         top: 0; left: 0;
         width: 100%; height: 100vh;
-        background-color: rgba(255, 255, 255, 0.98);
+        background-color: white;
         justify-content: center;
         align-items: center;
         gap: 20px;
-        z-index: 4000;
+        z-index: 5000;
     }
 
     .nav-links.open {
         display: flex !important;
     }
 
-    .nav-links li {
-        width: 100%;
-        text-align: center;
+    /* Sur mobile, on peut réduire un peu le logo "AB" */
+    .nav-logo { 
+        height: 45px; 
     }
 
-    .nav-links a {
-        font-size: 22px !important;
-        border-bottom: 1px solid #f3e9ff;
-        width: 70%;
-        display: inline-block;
-        padding-bottom: 10px;
-    }
-
-    .nav-logo-container {
-        right: 65px;
-    }
-    
-    .nav-logo { height: 35px; }
-
-    /* Cache le logo quand le menu est ouvert pour la clarté */
+    /* Cache le logo "AB" quand le menu mobile est ouvert pour la clarté */
     .nav-links.open ~ .nav-logo-container {
         display: none;
     }
-}
-/* Conteneur du logo */
-.nav-logo-container {
-    position: absolute;
-    right: 70px; /* On laisse de la place pour le hamburger à 20px du bord */
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-}
-
-/* Style de l'image du logo */
-.nav-logo {
-    height: 45px; /* Ajuste la taille selon ton image */
-    width: auto;
-    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.1)); /* Optionnel : petite ombre douce */
-}
-
-/* --- AJUSTEMENT MOBILE --- */
-@media (max-width: 900px) {
-    .nav-logo-container {
-        right: 60px; /* On le décale un peu plus car le hamburger est souvent plus gros sur tel */
-    }
-    
-    .nav-logo {
-        height: 35px; /* Un peu plus petit sur mobile pour ne pas tasser la barre */
-    }
-
-    /* Si tu veux que le logo disparaisse quand le menu est OUVERT pour laisser de la place */
-    .nav-links.open ~ .nav-logo-container {
-        display: none;
-    }
-}
-/* Style de l'image du logo - CORRIGÉ */
-.nav-logo {
-    height: 60px; /* Taille plus raisonnable pour la barre de 70px */
-    width: auto;
-    object-fit: contain;
-    mix-blend-mode: multiply; /* Rend le blanc de l'image "invisible" sur le blanc de la barre */
-    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.05));
-}
-
-/* On ajuste le conteneur pour qu'il ne déborde pas */
-.nav-logo-container {
-    position: absolute;
-    left: 20px; /* On le met à gauche pour libérer de la place pour les 7 liens */
-    top: 50%;
-    transform: translateY(-50%);
-    height: 70px;
-    display: flex;
-    align-items: center;
 }
 /* Espacement automatique pour tous les titres et textes */
 h1, h2, h3 {
