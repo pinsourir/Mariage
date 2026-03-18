@@ -103,7 +103,38 @@ body {
         text-align: center;
     }
 }
+/* Conteneur du logo */
+.nav-logo-container {
+    position: absolute;
+    right: 70px; /* On laisse de la place pour le hamburger à 20px du bord */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
 
+/* Style de l'image du logo */
+.nav-logo {
+    height: 45px; /* Ajuste la taille selon ton image */
+    width: auto;
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.1)); /* Optionnel : petite ombre douce */
+}
+
+/* --- AJUSTEMENT MOBILE --- */
+@media (max-width: 900px) {
+    .nav-logo-container {
+        right: 60px; /* On le décale un peu plus car le hamburger est souvent plus gros sur tel */
+    }
+    
+    .nav-logo {
+        height: 35px; /* Un peu plus petit sur mobile pour ne pas tasser la barre */
+    }
+
+    /* Si tu veux que le logo disparaisse quand le menu est OUVERT pour laisser de la place */
+    .nav-links.open ~ .nav-logo-container {
+        display: none;
+    }
+}
 /* Espacement automatique pour tous les titres et textes */
 h1, h2, h3 {
     margin-bottom: 20px; /* Espace sous le titre */
