@@ -1,23 +1,26 @@
 // ===== COMPTE À REBOURS MARIAGE =====
 
 // Date du mariage : 26 août 2027 à 15h
-// Format : Année, Mois (0-11), Jour, Heure, Minutes
-const weddingDate = new Date(2027, 7, 26, 15, 0, 0).getTime(); 
+const weddingDate = new Date("August 26, 2027 15:00:00").getTime();
 
+// Fonction pour animer les chiffres
 function animateValue(id, value) {
+
     const element = document.getElementById(id);
-    if (!element) return; // Sécurité si l'élément n'existe pas encore
 
-    // Si la valeur n'a pas changé, on ne fait rien pour éviter le clignotement
-    const newValue = value < 10 ? "0" + value : value;
-    if (element.innerText === newValue.toString()) return;
-
+    // ajoute une petite animation
     element.classList.add("flip");
+
     setTimeout(() => {
-        element.innerText = newValue;
+
+        // ajoute un 0 devant si nécessaire
+        element.innerText = value < 10 ? "0" + value : value;
+
         element.classList.remove("flip");
+
     }, 200);
 }
+
 
 // Mise à jour toutes les secondes
 setInterval(function() {
@@ -67,7 +70,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove("open");
     };
 });
-//Pour faire fonctionner les flèches du carousel
+// ========= Fleche du CAROUSEL  ==========
 let currentIndex = 0;
 
 function moveSlide(direction) {
@@ -84,12 +87,4 @@ function moveSlide(direction) {
 
     const offset = -currentIndex * 100;
     slide.style.transform = `translateX(${offset}%)`;
-}
-
-//carrousel de menu ne soit pas trop géant
-.carousel-slide img {
-    width: 100%;
-    max-height: 500px; /* Évite que l'image du plat prenne tout l'écran */
-    object-fit: contain; /* Garde l'image entière sans la déformer */
-    background: #fafafa;
 }
