@@ -141,6 +141,25 @@ body {
         display: none;
     }
 }
+/* Style de l'image du logo - CORRIGÉ */
+.nav-logo {
+    height: 60px; /* Taille plus raisonnable pour la barre de 70px */
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply; /* Rend le blanc de l'image "invisible" sur le blanc de la barre */
+    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.05));
+}
+
+/* On ajuste le conteneur pour qu'il ne déborde pas */
+.nav-logo-container {
+    position: absolute;
+    left: 20px; /* On le met à gauche pour libérer de la place pour les 7 liens */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
 /* Espacement automatique pour tous les titres et textes */
 h1, h2, h3 {
     margin-bottom: 20px; /* Espace sous le titre */
