@@ -18,19 +18,13 @@ body {
 }
 
 /* Espacement automatique pour tous les titres (Original conservé) */
-h1 {
+h1, h2 {
     margin-bottom: 20px;
     margin-top: 10px;
     font-family: 'Playfair Display', serif; /* Police classe pour TOUS les titres */
     color: #4b2e83; /* Violet foncé pour le contraste */
 }
 
-h2 {
-    margin-bottom: 20px;
-    margin-top: 10px;
-    font-family: 'Playfair Display', serif; /* Police classe pour TOUS les titres */
-    color: #a576db; /* Violet  pour le contraste */
-}
 h3 {
     margin-bottom: 20px;
     margin-top: 10px;
