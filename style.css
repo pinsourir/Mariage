@@ -236,7 +236,8 @@ section {
 }
 
 .section-purple {
-    background: #dcc5fc;
+    background: linear-gradient(to bottom, #ffffff, #f3e9ff);
+    color: #4b2e83;
 }
 
 /* ==========================================================
