@@ -60,21 +60,42 @@ p {
 }
 
 /* CORRECTIF : Ajout de la zone pour ton logo "AB" */
-.nav-logo-container {
+/*.nav-logo-container {
     position: absolute;
     left: 20px; /* Force le logo à gauche */
-    top: 50%;
+    /*top: 50%;
     transform: translateY(-50%);
     z-index: 1001;
 }
 
 /* CORRECTIF : Style cadré pour l'image du logo */
-.nav-logo { 
+/*.nav-logo { 
     height: 40px; 
     width: auto; 
     object-fit: contain;
     mix-blend-mode: multiply; /* Enlève le fond blanc du logo */
+/*}
+
+/* On force la zone du logo à ne pas dépasser de la barre de 70px */
+.nav-logo-container {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 70px; /* Même hauteur que la barre */
+    display: flex;
+    align-items: center;
+    z-index: 1001;
 }
+
+/* C'est ici qu'on gère la taille pour que ça ne déborde plus */
+.nav-logo { 
+    height: 60px;    /* Taille idéale pour être visible sans toucher les bords */
+    width: auto;     /* Garde les proportions du logo */
+    object-fit: contain;
+    /* On enlève mix-blend-mode car le fond est déjà blanc parfait */
+}
+
+
 
 .nav-links {
     display: flex;
