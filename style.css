@@ -59,29 +59,27 @@ p {
     padding: 0 20px;
 }
 
-.nav-logo-container {
+/* On cible la classe exacte de ton lien <a> autour du logo */
+.navbar-logo {
     position: absolute;
     left: 20px;
     top: 0;
-    height: 70px; /* Aligné sur la hauteur de la barre */
+    height: 70px; /* Aligné sur la navbar */
     display: flex;
     align-items: center;
-    overflow: hidden; /* Empêche tout débordement visuel */
-    z-index: 1001;
+    overflow: hidden; /* Empêche le logo de dépasser sur l'herbe */
+    text-decoration: none;
 }
 
-.nav-logo { 
-    /* Ajuste la hauteur ici pour que le logo soit à la taille voulue */
-    height: 55px; 
-    width: auto; 
+/* On cible l'image <img> à l'intérieur */
+.navbar-logo img {
+    height: 120px; /* On l'agrandit pour compenser le vide du fichier */
+    width: auto;
     object-fit: contain;
-    
-    /* Si le logo paraît trop petit à cause du vide dans ton PNG, 
-       augmente cette valeur (ex: 1.5) pour l'agrandir sans bouger la barre */
-    transform: scale(1.2); 
-    
+    transform: scale(1.6); /* On zoom sur le dessin "AB" */
     display: block;
 }
+
 .nav-links {
     display: flex;
     list-style: none;
