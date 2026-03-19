@@ -70,7 +70,7 @@ p {
 
 /* CORRECTIF : Style cadré pour l'image du logo */
 .nav-logo { 
-    height: 55px; 
+    height: 40px; 
     width: auto; 
     object-fit: contain;
     mix-blend-mode: multiply; /* Enlève le fond blanc du logo */
