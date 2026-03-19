@@ -274,14 +274,16 @@ section {
 }
 
 /* ===== RSVP ===== */
+
 .rsvp {
-    background: #c499ff;
-    color: white;
+    background-color: #f3e9ff; /* Un violet très pâle et élégant */
+    color: #4b2e83; /* On met le texte en violet foncé pour qu'il soit bien lisible */
+    padding: 80px 20px;
 }
 
-.rsvp iframe {
-    border: none;
-    border-radius: 10px;
+/* Si tu as un titre à l'intérieur de cette section */
+.rsvp h2 {
+    color: #4b2e83; /* Pour que le titre "Confirmation de présence" ressorte bien */
 }
 
 /* ===== FOOTER ===== */
