@@ -61,27 +61,27 @@ p {
 
 .nav-logo-container {
     position: absolute;
-    left: 10px; /* On le colle un peu plus au bord gauche */
+    left: 20px;
     top: 0;
-    height: 70px;
-    width: 120px; /* On limite la largeur de la zone du logo */
+    height: 70px; /* Aligné sur la hauteur de la barre */
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden; /* IMPORTANT : Coupe tout ce qui dépasse de la barre */
+    overflow: hidden; /* Empêche tout débordement visuel */
     z-index: 1001;
 }
 
 .nav-logo { 
-    height: 140px;    /* On l'agrandit volontairement (plus que la barre) */
-    width: auto;     
+    /* Ajuste la hauteur ici pour que le logo soit à la taille voulue */
+    height: 55px; 
+    width: auto; 
     object-fit: contain;
-    transform: scale(1.5); /* On zoom à l'intérieur pour que les lettres AB remplissent la barre */
+    
+    /* Si le logo paraît trop petit à cause du vide dans ton PNG, 
+       augmente cette valeur (ex: 1.5) pour l'agrandir sans bouger la barre */
+    transform: scale(1.2); 
+    
     display: block;
 }
-
-
-
 .nav-links {
     display: flex;
     list-style: none;
