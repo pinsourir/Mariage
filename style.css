@@ -59,24 +59,25 @@ p {
     padding: 0 20px;
 }
 
-/* On cible la classe exacte de ton lien <a> autour du logo */
 .navbar-logo {
     position: absolute;
-    left: 20px;
+    left: 30px; /* On l'écarte un peu plus du bord gauche pour respirer */
     top: 0;
-    height: 70px; /* Aligné sur la navbar */
+    height: 70px;
+    width: 100px; /* On limite la largeur pour ne pas gêner les liens */
     display: flex;
     align-items: center;
-    overflow: hidden; /* Empêche le logo de dépasser sur l'herbe */
+    justify-content: center; /* Centre le logo dans son propre cadre */
+    overflow: hidden; 
     text-decoration: none;
 }
 
-/* On cible l'image <img> à l'intérieur */
 .navbar-logo img {
-    height: 120px; /* On l'agrandit pour compenser le vide du fichier */
+    height: 100px; /* On réduit un tout petit peu la taille interne */
     width: auto;
     object-fit: contain;
-    transform: scale(1.6); /* On zoom sur le dessin "AB" */
+    /* Le transform translate ajuste la position millimétrée (X, Y) */
+    transform: scale(1.4) translateY(2px); 
     display: block;
 }
 
