@@ -12,12 +12,6 @@ body {
     overflow-x: hidden; /* CORRECTIF : Empêche le scroll horizontal */
 }
 
-.fleur-de-leah-regular {
-  font-family: "Fleur De Leah", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 
 /* CORRECTIF : Empêche les paddings de faire gonfler les boîtes */
 * {
@@ -191,10 +185,12 @@ p {
 
 /* Pour les grands titres romantiques (ex: Alicia & Bruno) */
 .hero h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 6rem; /* On l'agrandit car les polices cursives paraissent plus petites */
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Un léger ombre pour la lisibilité */
+   font-family: "Fleur De Leah", cursive;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 6rem; /* On l'agrandit car les polices cursives paraissent plus petites */
+   color: white;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Un léger ombre pour la lisibilité */
 }
 
 /* Pour les sous-titres élégants */
