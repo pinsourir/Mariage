@@ -421,7 +421,7 @@ footer {
    Palette de couleurs Jardin d'été
    ========================================================== */
 .color-palette {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -429,7 +429,7 @@ footer {
     font-style: italic;
     font-size: 0.9rem;
     color: #888;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .swatches {
@@ -440,7 +440,7 @@ footer {
 
 .swatch {
     width: 40px;
-    height: 40px;
+    height: 50px;
     border-radius: 50%; /* Rend la pastille ronde */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petit relief classe */
     border: 2px solid white; /* Contour blanc pour détacher du fond */
@@ -451,7 +451,7 @@ footer {
 .color-2 { background-color: #929a8a; } /* Vert Sauge Pâle */
 .color-3 { background-color: #ba9a92; } /* Rose Poudré (Nude) */
 .color-4 { background-color: #f7d6d1; } /* Rose Pâle Romantique (Le plus bas) */
-.color-5 { background-color: #fceae8; } /* Le rose le plus clair, comme ton fond */
+.color-5 { background-color: #fbead6; } /* Le rose le plus clair, comme ton fond */
 
 /* Correction Adaptabilité Mobile Globale (Style original conservé) */
 @media (max-width: 768px) {
