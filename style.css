@@ -36,12 +36,18 @@ h3 {
 /* texte caligraphier en noir*/
 .texte {
     color: #000;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+/* texte caligraphier en gris*/
+.subtitle {
+    color: #777;
+    margin-bottom: 10px;
     font-style: italic;
 }
 
 p {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     line-height: 1.6;
 }
 
