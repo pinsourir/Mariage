@@ -430,4 +430,37 @@ footer {
     .prev { left: 5px; }
     .next { right: 5px; }
 }
+/* ==========================================================
+   Palette de couleurs Jardin d'été
+   ========================================================== */
+.color-palette {
+    margin-top: 20px;
+    text-align: center;
+}
 
+.color-palette p {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.swatches {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espace entre les pastilles */
+}
+
+.swatch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Rend la pastille ronde */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petit relief classe */
+    border: 2px solid white; /* Contour blanc pour détacher du fond */
+}
+
+/* Vos 4 couleurs Jardin d'été */
+.color-1 { background-color: #fdf2e9; } /* Crème / Sable */
+.color-2 { background-color: #dcedc1; } /* Vert Sauge très clair */
+.color-3 { background-color: #ffd3b6; } /* Pêche poudré */
+.color-4 { background-color: #c499ff; } /* Votre Violet (rappel du thème) */
