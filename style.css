@@ -417,19 +417,6 @@ footer {
 .prev { left: -20px; }
 .next { right: -20px; }
 
-/* Correction Adaptabilité Mobile Globale (Style original conservé) */
-@media (max-width: 768px) {
-     CORRECTIF : Réduit le titre Alicia & Bruno pour qu'il tienne sur tel */
-    .hero h1 {
-        font-size: 3.5rem !important; 
-    }
-
-    .carousel-slide img {
-        height: 450px; /* Un peu plus petit sur petit écran */
-    }
-    .prev { left: 5px; }
-    .next { right: 5px; }
-}
 /* ==========================================================
    Palette de couleurs Jardin d'été
    ========================================================== */
@@ -462,5 +449,20 @@ footer {
 /* Vos 4 couleurs Jardin d'été */
 .color-1 { background-color: #fdf2e9; } /* Crème / Sable */
 .color-2 { background-color: #dcedc1; } /* Vert Sauge très clair */
-.color-3 { background-color: #ffd3b6; } /* Pêche poudré */
-.color-4 { background-color: #c499ff; } /* Votre Violet (rappel du thème) */
+.color-3 { background-color: ##ffccdd; } /* rose poudré */
+.color-4 { background-color: ##e4b6ff; } /* Votre Violet (rappel du thème) */
+
+/* Correction Adaptabilité Mobile Globale (Style original conservé) */
+@media (max-width: 768px) {
+     CORRECTIF : Réduit le titre Alicia & Bruno pour qu'il tienne sur tel */
+    .hero h1 {
+        font-size: 3.5rem !important; 
+    }
+
+    .carousel-slide img {
+        height: 450px; /* Un peu plus petit sur petit écran */
+    }
+    .prev { left: 5px; }
+    .next { right: 5px; }
+}
+
