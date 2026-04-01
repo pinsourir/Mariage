@@ -433,7 +433,7 @@ footer {
 }
 
 .color-palette p {
-    margin-top: 0 /* Supprime l'espace entre le titre et cette phrase */
+    margin-top: 0; /* Supprime l'espace entre le titre et cette phrase */
     font-style: italic;
     font-size: 0.9rem;
     color: #777;
