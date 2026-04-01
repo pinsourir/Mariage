@@ -319,6 +319,13 @@ footer {
     font-style: italic;
 }
 
+/* texte caligraphier en gris*/
+.texte {
+    color: #000;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
 .countdown-container {
     display: flex;
     justify-content: center;
@@ -411,16 +418,16 @@ footer {
 .next { right: -20px; }
 
 /* Correction Adaptabilité Mobile Globale (Style original conservé) */
-/*@media (max-width: 768px) {
-    /* CORRECTIF : Réduit le titre Alicia & Bruno pour qu'il tienne sur tel */
- /*   .hero h1 {
+@media (max-width: 768px) {
+     CORRECTIF : Réduit le titre Alicia & Bruno pour qu'il tienne sur tel */
+    .hero h1 {
         font-size: 3.5rem !important; 
     }
 
     .carousel-slide img {
         height: 450px; /* Un peu plus petit sur petit écran */
-  /*  }
+    }
     .prev { left: 5px; }
     .next { right: 5px; }
 }
-*/
+
