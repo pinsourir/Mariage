@@ -451,6 +451,7 @@ footer {
 .color-2 { background-color: #929a8a; } /* Vert Sauge Pâle */
 .color-3 { background-color: #ba9a92; } /* Rose Poudré (Nude) */
 .color-4 { background-color: #f7d6d1; } /* Rose Pâle Romantique (Le plus bas) */
+.color-5 { background-color: #fceae8; } /* Le rose le plus clair, comme ton fond */
 
 /* Correction Adaptabilité Mobile Globale (Style original conservé) */
 @media (max-width: 768px) {
