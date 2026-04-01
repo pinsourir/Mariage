@@ -305,14 +305,14 @@ footer {
     padding: 100px 20px;
     text-align: center;
 }
-
+/* titre caligraphier en violet foncé*/
 .countdown-title {
     font-size: 2.5rem;
     font-family: 'Playfair Display', serif;
     margin-bottom: 10px;
     color: #4b2e83;
 }
-
+/* texte caligraphier en gris*/
 .countdown-subtitle {
     color: #777;
     margin-bottom: 50px;
@@ -411,15 +411,16 @@ footer {
 .next { right: -20px; }
 
 /* Correction Adaptabilité Mobile Globale (Style original conservé) */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     /* CORRECTIF : Réduit le titre Alicia & Bruno pour qu'il tienne sur tel */
-    .hero h1 {
+ /*   .hero h1 {
         font-size: 3.5rem !important; 
     }
 
     .carousel-slide img {
         height: 450px; /* Un peu plus petit sur petit écran */
-    }
+  /*  }
     .prev { left: 5px; }
     .next { right: 5px; }
 }
+*/
