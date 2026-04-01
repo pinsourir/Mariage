@@ -427,7 +427,7 @@ footer {
    Palette de couleurs Jardin d'été
    ========================================================== */
 .color-palette {
-    margin-top: 10px;
+    margin-top: -10px;
     margin-bottom: 40px;  /* On crée un bel espace avant la question suivante */
     text-align: center;
 }
