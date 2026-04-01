@@ -446,11 +446,11 @@ footer {
     border: 2px solid white; /* Contour blanc pour détacher du fond */
 }
 
-/* Vos 4 couleurs Jardin d'été */
-.color-1 { background-color: #fdf2e9; } /* Crème / Sable */
-.color-2 { background-color: #dcedc1; } /* Vert Sauge très clair */
-.color-3 { background-color: ##ffccdd; } /* rose poudré */
-.color-4 { background-color: ##e4b6ff; } /* Votre Violet (rappel du thème) */
+/* Les 4 couleurs extraites de ton image */
+.color-1 { background-color: #616e53; } /* Vert Mousse Profond (Le plus haut) */
+.color-2 { background-color: #929a8a; } /* Vert Sauge Pâle */
+.color-3 { background-color: #ba9a92; } /* Rose Poudré (Nude) */
+.color-4 { background-color: #f7d6d1; } /* Rose Pâle Romantique (Le plus bas) */
 
 /* Correction Adaptabilité Mobile Globale (Style original conservé) */
 @media (max-width: 768px) {
