@@ -198,7 +198,7 @@ p {
 
 /* Pour les grands titres romantiques (ex: Alicia & Bruno) */
 .hero h1 {
-   font-family: "Fleur De Leah", cursive;
+   font-family: "Mrs Saint Delafield", cursive;
    font-weight: 400;
    font-style: normal;
    font-size: 6rem; /* On l'agrandit car les polices cursives paraissent plus petites */
