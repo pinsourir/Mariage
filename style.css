@@ -10,6 +10,12 @@ body {
     text-align: center;
     scroll-behavior: smooth;
     overflow-x: hidden; /* CORRECTIF : Empêche le scroll horizontal */
+   
+   /* L'EFFET MAGIQUE : Fixe l'image pendant le scroll */
+    background-attachment: fixed; 
+    
+    /* Assure que la section suivante passe bien par-dessus */
+    z-index: 1;
 }
 
 
