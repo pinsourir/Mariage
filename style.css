@@ -310,7 +310,7 @@ section {
     
     .photo-etape {
         left: -70px; /* On les rapproche un peu de la barre sur petit écran */
-        width: 35px;
+        width: 50px;/* Taille sur mobile */
     }
 }
 
