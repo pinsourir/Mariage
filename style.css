@@ -270,40 +270,47 @@ section {
 .timeline {
     max-width: 600px;
     margin: 40px auto;
-    border-left: 4px solid #4b2e83; /* Taille de barre initiale */
-    padding-left: 20px; /* Espace entre la barre et ton texte */
+    border-left: 4px solid #4b2e83; 
+    padding-left: 35px; /* Espace entre la barre et ton texte */
     position: relative;
-    text-align: left; /* Texte bien aligné à gauche */
+    text-align: left;
 }
 
 .timeline-item {
-    margin-bottom: 30px; /* Retour à l'espacement d'avant */
+    margin-bottom: 40px;
     position: relative;
 }
 
-/* --- Style du Texte --- */
+/* --- Style de tes PHOTOS (à gauche de la barre) --- */
+.photo-etape {
+    position: absolute;
+    left: -75px; /* Ajuste pour que l'image soit bien à gauche de la ligne */
+    top: -5px;   /* Aligne la photo avec le haut du titre */
+    width: 40px; /* Taille de tes images */
+    height: auto;
+    background: none !important; /* On s'assure qu'il n'y a pas de fond */
+    display: block;
+}
+
+/* --- Ajustement Mobile (pour ne pas que les images sortent de l'écran) --- */
+@media (max-width: 768px) {
+    .timeline {
+        margin-left: 85px; /* On décale tout vers la droite sur mobile */
+        margin-right: 20px;
+    }
+    
+    .photo-etape {
+        left: -65px; /* On les rapproche un peu de la barre sur petit écran */
+        width: 32px;
+    }
+}
+
+/* --- Style du Texte (On garde ce que tu avais) --- */
 .timeline-item h3 {
     color: #c9a1f7;
     margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem; /* Taille de texte d'origine */
-}
-
-/* --- Style des Icônes (À GAUCHE de la barre, sans fond) --- */
-[class^="icone-"] {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-    font-weight: 900; /* On force le Solid pour être sûr que tout s'affiche */
-    
-    color: #888888; /* Gris */
-    font-size: 1.7rem; /* Taille initiale plus petite */
-    font-style: normal;
-    
-    position: absolute;
-    left: -75px; /* Placement de l'autre côté de la barre (à gauche toute) */
-    width: 30px;
-    text-align: center;
-    top: 2px;
-    background: none; /* AUCUN FOND comme demandé */
+    font-size: 1.3rem;
 }
 
 .timeline-item .subtitles {
@@ -311,29 +318,6 @@ section {
     color: #777;
     font-size: 1rem;
 }
-
-/* --- Correspondance des icônes choisies --- */
-/* Mairie - Building Columns */
-.icone-mairie::before { content: "\f19c"; }
-
-/* Cérémonie - Church */
-.icone-ceremonie::before { content: "\f675"; }
-
-/* Domaine - Fort Awesome (C'est un logo, donc Brands) */
-.icone-domaine { font-family: "Font Awesome 6 Brands" !important; }
-.icone-domaine::before { content: "\f286"; }
-
-/* Cocktail - Glass Citrus (Attention: Martini Glass est souvent Solid en gratuit) */
-.icone-cocktail::before { content: "\f561"; }
-
-/* Dîner - Utensils */
-.icone-diner::before { content: "\f2e7"; }
-
-/* Bal - Star */
-.icone-bal::before { content: "\f005"; }
-
-/* Fin - Bed */
-.icone-dodo::before { content: "\f236"; }
 
 
 
