@@ -330,22 +330,27 @@ section {
 }
 
 /* --- Correspondance des icônes choisies --- */
+/* Mairie - Building Columns */
+.icone-mairie::before { content: "\f19c"; }
 
-.icone-mairie::before { content: "\f19c"; }    /* Building-columns */
+/* Cérémonie - Church */
+.icone-ceremonie::before { content: "\f675"; }
 
-.icone-ceremonie::before { content: "\f675"; } /* Church */
-
+/* Domaine - Fort Awesome (C'est un logo, donc Brands) */
 .icone-domaine { font-family: "Font Awesome 6 Brands" !important; }
-.icone-domaine::before { content: "\f286"; }   /* Fort-awesome (Logo) */
+.icone-domaine::before { content: "\f286"; }
 
-.icone-cocktail::before { content: "\f561"; }  /* Martini-glass-citrus */
+/* Cocktail - Glass Citrus (Attention: Martini Glass est souvent Solid en gratuit) */
+.icone-cocktail::before { content: "\f561"; }
 
-.icone-diner::before { content: "\f2e7"; }     /* Utensils */
+/* Dîner - Utensils */
+.icone-diner::before { content: "\f2e7"; }
 
-.icone-bal::before { content: "\f005"; }       /* Star */
+/* Bal - Star */
+.icone-bal::before { content: "\f005"; }
 
-.icone-dodo::before { content: "\f236"; }      /* Bed */
-
+/* Fin - Bed */
+.icone-dodo::before { content: "\f236"; }
 
 
 
