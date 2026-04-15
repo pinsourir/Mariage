@@ -295,11 +295,11 @@ section {
     font-weight: 900; /* On force le Solid pour être sûr que tout s'affiche */
     
     color: #888888; /* Gris */
-    font-size: 2.2rem; /* Taille initiale plus petite */
+    font-size: 1.7rem; /* Taille initiale plus petite */
     font-style: normal;
     
     position: absolute;
-    left: -55px; /* Placement de l'autre côté de la barre (à gauche toute) */
+    left: -75px; /* Placement de l'autre côté de la barre (à gauche toute) */
     width: 30px;
     text-align: center;
     top: 2px;
