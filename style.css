@@ -271,15 +271,22 @@ section {
     margin: auto;
     border-left: 4px solid #4b2e83;
     padding-left: 20px;
+    text-align: left;
+    position: relative;
 }
 
 .timeline-item {
     margin-bottom: 30px;
-    text-align: left;
+    position: relative;
 }
 
 .timeline-item h3 {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    color: #c9a1f7;
     margin: 0;
+    font-size: 1.4rem;
 }
 
 /* ===== GALERIE ===== */
@@ -298,18 +305,20 @@ section {
 }
 
 
-/* ===== icone programme ===== */
-
-/* --- Style de base pour toutes les icônes du programme --- */
+/* Style des icônes */
 [class^="icone-"] {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands"; /* Supporte aussi le logo domaine */
-    font-weight: 900; /* Nécessaire pour l'affichage des icônes */
-    margin-right: 15px;
-    color: #c499ff; /* Ton violet */
-    font-style: normal;
-    display: inline-block;
-    width: 30px; /* Aligne parfaitement les icônes verticalement */
+    width: 30px; /* Largeur fixe pour l'alignement */
     text-align: center;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-weight: 900;
+    color: #c499ff;
+    font-style: normal;
+}
+
+/* L'heure sous le titre */
+.timeline-item .subtitles {
+    margin-left: 45px; /* Aligne l'horaire sous le texte du titre */
+    margin-top: 5px;
 }
 
 /* --- Correspondance des icônes choisies --- */
