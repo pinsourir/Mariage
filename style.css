@@ -286,10 +286,10 @@ section {
     position: absolute;
     
     /* Placement MAGIQUE : rapproché de la barre */
-    left: -65px; /* Ajuste pour que l'image soit juste à gauche de la ligne */
+    left: -75px; /* Ajuste pour que l'image soit juste à gauche de la ligne */
     
     top: -5px;   /* Aligne la photo avec le haut du titre */
-    width: 45px; /* ON AGRANDIT ICI (Taille précédente: ~35px) */
+    width: 60px; /* ON AGRANDIT ICI (Taille précédente: ~45px) */
     height: auto;
     
     background: transparent !important; /* On garantit la transparence */
@@ -304,12 +304,12 @@ section {
 /* --- Ajustement Mobile (pour ne pas que les images sortent de l'écran) --- */
 @media (max-width: 768px) {
     .timeline {
-        margin-left: 90px; /* On décale tout vers la droite sur mobile */
+        margin-left: 80px; /* On décale tout vers la droite sur mobile */
         margin-right: 20px;
     }
     
     .photo-etape {
-        left: -55px; /* On les rapproche un peu de la barre sur petit écran */
+        left: -70px; /* On les rapproche un peu de la barre sur petit écran */
         width: 35px;
     }
 }
