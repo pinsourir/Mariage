@@ -54,7 +54,7 @@ p {
 
 /* Cas particulier pour le Menu (ton image) */
 #menu p {
-    font-weight: bold;
+    font-weight: normal;
     margin: 10px 0;
 }
 
