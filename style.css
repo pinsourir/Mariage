@@ -284,24 +284,33 @@ section {
 /* --- Style de tes PHOTOS (à gauche de la barre) --- */
 .photo-etape {
     position: absolute;
-    left: -75px; /* Ajuste pour que l'image soit bien à gauche de la ligne */
+    
+    /* Placement MAGIQUE : rapproché de la barre */
+    left: -65px; /* Ajuste pour que l'image soit juste à gauche de la ligne */
+    
     top: -5px;   /* Aligne la photo avec le haut du titre */
-    width: 45px; /* Taille de tes images */
+    width: 45px; /* ON AGRANDIT ICI (Taille précédente: ~35px) */
     height: auto;
-    background: none !important; /* On s'assure qu'il n'y a pas de fond */
+    
+    background: transparent !important; /* On garantit la transparence */
+    border: none !important;
     display: block;
+    
+    /* Empêche les images Solid d'être trop lourdes visuellement */
+    opacity: 0.9; 
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.1));
 }
 
 /* --- Ajustement Mobile (pour ne pas que les images sortent de l'écran) --- */
 @media (max-width: 768px) {
     .timeline {
-        margin-left: 85px; /* On décale tout vers la droite sur mobile */
+        margin-left: 90px; /* On décale tout vers la droite sur mobile */
         margin-right: 20px;
     }
     
     .photo-etape {
-        left: -70px; /* On les rapproche un peu de la barre sur petit écran */
-        width: 40px;
+        left: -55px; /* On les rapproche un peu de la barre sur petit écran */
+        width: 35px;
     }
 }
 
