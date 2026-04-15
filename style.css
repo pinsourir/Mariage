@@ -297,6 +297,42 @@ section {
     border-radius: 15px;
 }
 
+
+/* ===== icone programme ===== */
+
+/* --- Style de base pour toutes les icônes du programme --- */
+[class^="icone-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands"; /* Supporte aussi le logo domaine */
+    font-weight: 900; /* Nécessaire pour l'affichage des icônes */
+    margin-right: 15px;
+    color: #c499ff; /* Ton violet */
+    font-style: normal;
+    display: inline-block;
+    width: 30px; /* Aligne parfaitement les icônes verticalement */
+    text-align: center;
+}
+
+/* --- Correspondance des icônes choisies --- */
+
+.icone-mairie::before { content: "\f19c"; }    /* Building-columns */
+
+.icone-ceremonie::before { content: "\f675"; } /* Church */
+
+.icone-domaine { font-family: "Font Awesome 6 Brands" !important; }
+.icone-domaine::before { content: "\f286"; }   /* Fort-awesome (Logo) */
+
+.icone-cocktail::before { content: "\f561"; }  /* Martini-glass-citrus */
+
+.icone-diner::before { content: "\f2e7"; }     /* Utensils */
+
+.icone-bal::before { content: "\f005"; }       /* Star */
+
+.icone-dodo::before { content: "\f236"; }      /* Bed */
+
+
+
+
+
 /* ===== RSVP ===== */
 
 .rsvp {
