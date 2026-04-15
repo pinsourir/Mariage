@@ -271,20 +271,22 @@ section {
     max-width: 600px;
     margin: 50px auto;
     border-left: 3px solid #4b2e83; /* La ligne violette */
-    padding-left: 40px; /* Espace entre la ligne et ton texte */
-    position: relative; /* Nécessaire pour placer les icônes par rapport à la ligne */
+    padding-left: 60px; /* On augmente l'espace pour le texte */
+    position: relative;
+    text-align: left;
 }
 
 .timeline-item {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     position: relative;
 }
 
 /* --- Ajustement du texte --- */
 .timeline-item h3 {
-    color: #c9a1f7; /* Ton violet clair pour le texte */
+    color: #c9a1f7;
     margin: 0;
     font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
 }
 
 /* ===== GALERIE ===== */
@@ -303,30 +305,28 @@ section {
 }
 
 
-/* --- Style commun des Icônes (Placées à gauche de la ligne) --- */
+/* --- Style des Icônes (À GAUCHE de la ligne) --- */
 [class^="icone-"] {
-    /* Choix de la police : Regular pour le gratuit */
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-    font-weight: 400; /* 400 = Style 'Regular' (Gratuit et plus fin que le Solid) */
+    font-weight: 400; /* Style Regular pour la finesse */
     
-    /* Couleur & Taille */
-    color: #777; /* Ton gris identique à tes sous-titres */
-    font-size: 1.2rem;
+    color: #888888; /* Gris élégant */
+    font-size: 1.8rem; /* ON AGRANDIT ICI */
     font-style: normal;
     
-    /* Positionnement MAGIQUE à gauche de la ligne */
     position: absolute;
-    left: -14px; /* On décale l'icône pour qu'elle "chevauche" ou soit à gauche de la ligne */
-    background-color: #ffffff; /* Optionnel : un fond blanc pour couper la ligne derrière l'icône */
-    padding: 5px 0;
-    width: 28px;
+    /* On les place à gauche de la ligne (la ligne est à 0) */
+    left: -80px; 
+    width: 50px;
     text-align: center;
+    top: -5px; /* Aligne l'icône avec le haut du texte */
 }
 
-/* L'heure sous le titre */
+/* L'heure sous le titre (on enlève la marge forcée précédente) */
 .timeline-item .subtitles {
-    margin-left: 45px; /* Aligne l'horaire sous le texte du titre */
-    margin-top: 5px;
+    margin-left: 0; 
+    margin-top: 8px;
+    color: #777; /* Gris pour l'heure aussi */
 }
 
 /* --- Correspondance des icônes choisies --- */
