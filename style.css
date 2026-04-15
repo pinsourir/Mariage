@@ -270,8 +270,8 @@ section {
 .timeline {
     max-width: 600px;
     margin: 40px auto;
-    border-left: 3px solid #4b2e83; /* Taille de barre initiale */
-    padding-left: 30px; /* Espace entre la barre et ton texte */
+    border-left: 4px solid #4b2e83; /* Taille de barre initiale */
+    padding-left: 20px; /* Espace entre la barre et ton texte */
     position: relative;
     text-align: left; /* Texte bien aligné à gauche */
 }
