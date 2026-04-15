@@ -286,7 +286,7 @@ section {
     position: absolute;
     left: -75px; /* Ajuste pour que l'image soit bien à gauche de la ligne */
     top: -5px;   /* Aligne la photo avec le haut du titre */
-    width: 40px; /* Taille de tes images */
+    width: 45px; /* Taille de tes images */
     height: auto;
     background: none !important; /* On s'assure qu'il n'y a pas de fond */
     display: block;
@@ -300,8 +300,8 @@ section {
     }
     
     .photo-etape {
-        left: -65px; /* On les rapproche un peu de la barre sur petit écran */
-        width: 32px;
+        left: -70px; /* On les rapproche un peu de la barre sur petit écran */
+        width: 40px;
     }
 }
 
