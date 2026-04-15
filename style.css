@@ -266,54 +266,50 @@ section {
 /* ==========================================================
    5. TIMELINE, GALERIE & RSVP (Style original conservé)
    ========================================================== */
-/* --- La Timeline (La ligne verticale) --- */
+/* --- La Timeline --- */
 .timeline {
     max-width: 600px;
-    margin: 50px auto;
-    border-left: 3px solid #4b2e83; /* Ta ligne violette */
-    padding-left: 0; /* On gère l'espace via les items maintenant */
+    margin: 40px auto;
+    border-left: 3px solid #4b2e83; /* Taille de barre initiale */
+    padding-left: 30px; /* Espace entre la barre et ton texte */
     position: relative;
+    text-align: left; /* Texte bien aligné à gauche */
 }
 
-/* --- Chaque étape du programme --- */
 .timeline-item {
-    margin-bottom: 40px;
-    padding-left: 45px; /* Espace entre la ligne et le début du texte */
+    margin-bottom: 30px; /* Retour à l'espacement d'avant */
     position: relative;
 }
 
-/* --- Ajustement du texte --- */
+/* --- Style du Texte --- */
 .timeline-item h3 {
     color: #c9a1f7;
     margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    line-height: 1.2;
+    font-size: 1.3rem; /* Taille de texte d'origine */
 }
 
-/* --- Style des Icônes (Grises et centrées sur la ligne) --- */
+/* --- Style des Icônes (À GAUCHE de la barre, sans fond) --- */
 [class^="icone-"] {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-    font-weight: 900; /* Version Solid gratuite (plus fiable) */
+    font-weight: 900; /* On force le Solid pour être sûr que tout s'affiche */
     
-    color: #888888; /* Ton gris */
-    font-size: 1.4rem; /* Taille équilibrée */
+    color: #888888; /* Gris */
+    font-size: 1.2rem; /* Taille initiale plus petite */
     font-style: normal;
     
     position: absolute;
-    /* On place le centre de l'icône exactement sur la ligne */
-    left: -13px; 
-    top: 2px; /* Ajuste la hauteur pour l'aligner avec ton titre h3 */
-    
-    background-color: #fdfbff; /* On remet un fond de la couleur de ta page pour couper la ligne proprement */
-    width: 26px;
+    left: -45px; /* Placement de l'autre côté de la barre (à gauche toute) */
+    width: 30px;
     text-align: center;
+    top: 2px;
+    background: none; /* AUCUN FOND comme demandé */
 }
 
 .timeline-item .subtitles {
-    margin-top: 5px;
+    margin-top: 3px;
     color: #777;
-    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
 }
 
 /* ===== GALERIE ===== */
