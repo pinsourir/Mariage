@@ -270,14 +270,15 @@ section {
 .timeline {
     max-width: 600px;
     margin: 50px auto;
-    border-left: 3px solid #4b2e83; /* La ligne violette */
-    padding-left: 60px; /* On augmente l'espace pour le texte */
+    border-left: 3px solid #4b2e83; /* Ta ligne violette */
+    padding-left: 0; /* On gère l'espace via les items maintenant */
     position: relative;
-    text-align: left;
 }
 
+/* --- Chaque étape du programme --- */
 .timeline-item {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    padding-left: 45px; /* Espace entre la ligne et le début du texte */
     position: relative;
 }
 
@@ -286,7 +287,33 @@ section {
     color: #c9a1f7;
     margin: 0;
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+/* --- Style des Icônes (Grises et centrées sur la ligne) --- */
+[class^="icone-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-weight: 900; /* Version Solid gratuite (plus fiable) */
+    
+    color: #888888; /* Ton gris */
+    font-size: 1.4rem; /* Taille équilibrée */
+    font-style: normal;
+    
+    position: absolute;
+    /* On place le centre de l'icône exactement sur la ligne */
+    left: -13px; 
+    top: 2px; /* Ajuste la hauteur pour l'aligner avec ton titre h3 */
+    
+    background-color: #fdfbff; /* On remet un fond de la couleur de ta page pour couper la ligne proprement */
+    width: 26px;
+    text-align: center;
+}
+
+.timeline-item .subtitles {
+    margin-top: 5px;
+    color: #777;
+    font-family: 'Playfair Display', serif;
 }
 
 /* ===== GALERIE ===== */
@@ -304,30 +331,6 @@ section {
     border-radius: 15px;
 }
 
-
-/* --- Style des Icônes (À GAUCHE de la ligne) --- */
-[class^="icone-"] {
-    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
-    font-weight: 400; /* Style Regular pour la finesse */
-    
-    color: #888888; /* Gris élégant */
-    font-size: 1.8rem; /* ON AGRANDIT ICI */
-    font-style: normal;
-    
-    position: absolute;
-    /* On les place à gauche de la ligne (la ligne est à 0) */
-    left: -80px; 
-    width: 50px;
-    text-align: center;
-    top: -5px; /* Aligne l'icône avec le haut du texte */
-}
-
-/* L'heure sous le titre (on enlève la marge forcée précédente) */
-.timeline-item .subtitles {
-    margin-left: 0; 
-    margin-top: 8px;
-    color: #777; /* Gris pour l'heure aussi */
-}
 
 /* --- Correspondance des icônes choisies --- */
 /* Mairie - Building Columns */
