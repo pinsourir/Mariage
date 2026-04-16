@@ -286,7 +286,7 @@ section {
     position: absolute;
     
     /* Placement MAGIQUE : rapproché de la barre */
-    left: -75px; /* Ajuste pour que l'image soit juste à gauche de la ligne */
+    left: -100px; /* Ajuste pour que l'image soit juste à gauche de la ligne */
     
     top: -5px;   /* Aligne la photo avec le haut du titre */
     width: 60px; /* ON AGRANDIT ICI (Taille précédente: ~45px) */
