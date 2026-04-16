@@ -304,7 +304,7 @@ section {
 /* --- Ajustement Mobile (pour ne pas que les images sortent de l'écran) --- */
 @media (max-width: 768px) {
     .timeline {
-        margin-left: 90px; /* On décale tout vers la droite sur mobile */
+        margin-left: 100px; /* On décale tout vers la droite sur mobile */
         margin-right: 20px;
     }
     
