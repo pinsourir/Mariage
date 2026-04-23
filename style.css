@@ -533,4 +533,193 @@ footer {
     .prev { left: 5px; }
     .next { right: 5px; }
 }
+/* ==========================================================
+   lieux
+   ========================================================== */
+/* Cache les contenus par défaut */
+.lieu-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
 
+/* Affiche uniquement le lieu actif */
+.lieu-content.active {
+    display: block;
+}
+
+/* Style des boutons côte à côte */
+.lieu-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: 2px solid #4b2e83;
+    background: white;
+    color: #4b2e83;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: 'Playfair Display', serif;
+    flex: 1; /* Les boutons prennent la même place */
+    max-width: 120px;
+}
+
+.tab-btn.active {
+    background: #4b2e83;
+    color: white;
+}
+
+/* Style de base pour l'image (Mobile first) */
+.img-lieu {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* --- Correction Spéciale Ordinateur --- */
+@media (min-width: 769px) {
+    .lieu-content {
+        max-width: 700px; /* Évite que le texte et l'image s'étalent trop */
+        margin: 0 auto;   /* Centre tout le bloc */
+        padding: 20px;
+    }
+
+    .img-lieu {
+        max-height: 450px; /* Limite la hauteur pour ne pas scroller à l'infini */
+        width: auto;       /* Garde les proportions */
+        margin: 0 auto 20px auto;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Effet propre sur PC */
+    }
+}
+/* ==========================================================
+   Design à la Google
+   ========================================================== */
+.faq-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd; /* Ligne fine comme Google */
+}
+
+.faq-question {
+    width: 100%;
+    padding: 20px 0;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #4b2e83;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; /* Animation fluide */
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.faq-answer p {
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+/* Le petit chevron qui tourne */
+.faq-icon::after {
+    content: '\2304'; /* Symbole chevron */
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-icon::after {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Hauteur max de la réponse une fois ouverte */
+}
+
+
+/* ==========================================================
+   CARROUSEL CIRCULAIRE (Notre Histoire)
+   ========================================================== */
+
+/* 1. Le conteneur extérieur : sert à centrer le cercle horizontalement */
+.histoire-cercle-container {
+    display: flex;             /* Active le mode Flexbox pour l'alignement */
+    justify-content: center;   /* Centre le contenu sur la ligne */
+    margin: 40px 0;            /* Ajoute de l'espace au-dessus et en-dessous du cercle */
+}
+
+/* 2. Le cadre du cercle : définit la forme et les limites */
+.diaporama-cercle {
+    position: relative;        /* Nécessaire pour placer les flèches à l'intérieur */
+    width: 280px;              /* Largeur du cercle (ajuste selon tes envies) */
+    height: 280px;             /* Doit être identique à la largeur pour un rond parfait */
+    border-radius: 50%;        /* La magie qui transforme le carré en rond */
+    overflow: hidden;          /* Coupe les coins des photos pour qu'elles restent dans le rond */
+    border: 2px solid #4b2e83; /* Ta bordure violette décorative */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Ajoute un effet d'ombre pour le relief */
+}
+
+/* 3. Les diapositives : s'assurent que les photos remplissent le cercle */
+.slide-histoire {
+    display: none;             /* Cache toutes les photos par défaut */
+    width: 100%;               /* Prend 100% de la largeur du cercle */
+    height: 100%;              /* Prend 100% de la hauteur du cercle */
+}
+
+/* 4. La classe "active" : ajoutée par le JS pour afficher la photo en cours */
+.slide-histoire.active {
+    display: block;            /* Rend la photo visible */
+    animation: fadeEffect 1s;  /* Lance l'animation de fondu (définie plus bas) */
+}
+
+/* 5. Le réglage de l'image : évite les déformations */
+.slide-histoire img {
+    width: 100%;               /* L'image s'étire sur toute la largeur */
+    height: 100%;              /* L'image s'étire sur toute la hauteur */
+    object-fit: cover;         /* Zoom légèrement pour remplir sans écraser le visage */
+}
+
+/* 6. Les flèches : les boutons pour changer de photo */
+.prev-histoire, .next-histoire {
+    position: absolute;        /* Positionne les flèches "sur" l'image */
+    top: 50%;                  /* Aligne verticalement au centre */
+    transform: translateY(-50%); /* Ajustement précis du centrage vertical */
+    background: transparent; /* Fond blanc transparent pour voir l'image derrière */
+    border: none;              /* Supprime la bordure par défaut du bouton */
+    padding: 10px;             /* Taille de la zone cliquable */
+    cursor: pointer;           /* Change le curseur en main au survol */
+    border-radius: 50%;        /* Rend les boutons fléchés eux aussi ronds */
+    color: #4b2e83;            /* Couleur des flèches (ton violet) */
+    font-weight: bold;         /* Rend les flèches plus épaisses */
+    z-index: 10;               /* Garde les flèches au premier plan */
+}
+
+.prev-histoire { left: 10px; }  /* Décale la flèche gauche du bord */
+.next-histoire { right: 10px; } /* Décale la flèche droite du bord */
+
+/* 7. L'animation de fondu (Fade) */
+@keyframes fadeEffect {
+    from { opacity: 0.4; }      /* Commence à moitié transparent */
+    to { opacity: 1; }          /* Finit totalement opaque */
+}
