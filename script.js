@@ -88,3 +88,57 @@ function moveSlide(direction) {
     const offset = -currentIndex * 100;
     slide.style.transform = `translateX(${offset}%)`;
 }
+
+//===== Boutons Lieux ========//
+function showLieu(idLieu) {
+    // 1. Cacher tous les contenus
+    const contenus = document.querySelectorAll('.lieu-content');
+    contenus.forEach(c => c.classList.remove('active'));
+
+    // 2. Désactiver tous les boutons
+    const boutons = document.querySelectorAll('.tab-btn');
+    boutons.forEach(b => b.classList.remove('active'));
+
+    // 3. Afficher le contenu choisi et activer son bouton
+    document.getElementById(idLieu).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+
+// ========= à la google  ==========
+function toggleFAQ(button) {
+    const item = button.parentElement;
+    
+    // Optionnel : ferme les autres questions ouvertes
+    /*
+    document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if (otherItem !== item) otherItem.classList.remove('active');
+    });
+    */
+
+    item.classList.toggle('active');
+}
+
+// ========= carousel notre histoire  ==========
+// ========= Nouveau CAROUSEL CERCLE (Histoire) ==========
+let indexHistoire = 0;
+
+function changeSlide(direction) {
+    const slides = document.querySelectorAll('.slide-histoire'); // On cible les slides du cercle
+    
+    // On cache la slide actuelle
+    slides[indexHistoire].classList.remove('active');
+    
+    // On calcule le nouvel index
+    indexHistoire += direction;
+
+    if (indexHistoire >= slides.length) {
+        indexHistoire = 0;
+    } else if (indexHistoire < 0) {
+        indexHistoire = slides.length - 1;
+    }
+
+    // On affiche la nouvelle slide
+    slides[indexHistoire].classList.add('active');
+}
+// Fait tourner le cercle automatiquement toutes les 5 secondes
+setInterval(() => changeSlide(1), 5000);
