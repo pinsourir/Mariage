@@ -77,12 +77,23 @@
 <!-- ===== 2. NOTRE HISTOIRE ===== -->
 <section id="histoire" class="section-white">
     <h2 class="countdown-title">Notre histoire</h2>
-    <p class="countdown-subtitle">On a fait plein plein de truc!!!😌<br> Enfaite là on est fiancer! Et avant ca, on c'est rencontrer au lycée. ET JUSTE avant y'a eu ... ? la revolution 🤔... Le crois que je suis aller trop loin😅!!</p>
-    <div class="gallery">
-        <img src="image/eux1.jpg" alt="Photo d'eux 1">
-        <img src="https://www.ville-saintgratien.fr/medias/2021/04/lycee-monod-scaled.jpg" alt="Photo d'eux 2">
-        <img src="https://www.civitatis.com/f/francia/paris/guia/historia.jpg" alt="Photo d'eux 3">
+    <p class="countdown-subtitle">On a fait plein plein de truc!!!😌<br> dite moi quoi ecrire. svp</p>
+    <div class="histoire-cercle-container">
+    <div class="diaporama-cercle">
+        <div class="slide-histoire active">
+            <img src="https://www.ville-saintgratien.fr/medias/2021/04/lycee-monod-scaled.jpg" alt="Notre rencontre">
+        </div>
+        <div class="slide-histoire">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmkMERLtDBSKysAJFJ14BGrj26Fk7StxgMSg&s" alt="Premier voyage">
+        </div>
+        <div class="slide-histoire">
+            <img src="image/eux1.jpg" alt="La demande">
+        </div>
+
+        <button class="prev-histoire" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next-histoire" onclick="changeSlide(1)">&#10095;</button>
     </div>
+</div>
 </section>
 
 <!-- ===== 3. PROGRAMME (TIMELINE VERTICALE) ===== -->
@@ -137,57 +148,145 @@
 <!-- ===== 4. LES LIEUX ===== -->
 <section id="lieux" class="section-white">
     <h2 class="countdown-title">Les lieux</h2>
-    <h3>Le domaine des 3 voyages</h3>
-
-    <!-- photos des lieux -->
-    <div class="gallery">
-        <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/tuile-agenda-eglise/32654-1-fre-FR/TUILE-AGENDA-Eglise.jpg" alt="Photo lieu 1">
-        <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/mairie-domont-fermeture-services-municipaux-site/15067-1-fre-FR/Mairie-Domont-fermeture-services-municipaux-site.jpg" alt="Photo lieu 2">
-        <img src="https://image.bridebook.com/weddingsuppliers/venue/frBXrBx9XZ/b45f611f-cd4c-407c-b124-66034f98b923.jpg/dpr=2,fit=cover,g=face,w=460,h=310" alt="Photo lieu 3">
-    </div>
-
-
-    <p class="texte"><strong>Adresse :</strong> domaine des 3 voyages, 7 Rue de Pacy, 27640 Merey</p>
-
-    <!-- Google Maps intégré (remplacer l’adresse) -->
-   
-
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335288.24231016746!2d0.7979679107665939!3d48.96415967667269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6b4bb0d9fd9bd%3A0xb11c1e3f29302a31!2sdomaine%20des%203%20voyages!5e0!3m2!1sfr!2sfr!4v1772550130853!5m2!1sfr!2sfr"
-        width="100%" 
-        height="400" 
-        style="border:0;"
-        loading="lazy">
-    </iframe>
     
-    <p class="texte">Conseils d’accès : parking disponible sur place.</p>
+
+    <!-- bouton des lieux -->
+    <div class="lieu-selector">
+    <button class="tab-btn active" onclick="showLieu('eglise')">Église</button>
+    <button class="tab-btn" onclick="showLieu('mairie')">Mairie</button>
+    <button class="tab-btn" onclick="showLieu('domaine')">Domaine</button>
+</div>
+
+<div id="eglise" class="lieu-content active">
+    <h3>Église Sainte Marie Madeleine</h3>
+    <p class="adresse">Adresse : 3 Place de l'Église, 95330 Domont</p>
+    <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/tuile-agenda-eglise/32654-1-fre-FR/TUILE-AGENDA-Eglise.jpg" alt="Église" class="img-lieu">
+    <p class="conseil">Conseils d'accès : parking disponible sur place.</p>
+    <div class="map-container">
+        <!-- Google Maps intégré (remplacer l’adresse) -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.144030631138!2d2.3260365999999997!3d49.026867599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e642854767df5b%3A0xcbfe2a3c98c53e3f!2s%C3%89glise%20Sainte%20Marie%20Madeleine!5e0!3m2!1sfr!2sfr!4v1776850216818!5m2!1sfr!2sfr" 
+            width="100%" 
+            height="400" 
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<div id="mairie" class="lieu-content">
+    <h3>Mairie de Domont</h3>
+    <p class="adresse">Adresse : 47 Rue de la Mairie, 95330 Domont</p>
+    <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/mairie-domont-fermeture-services-municipaux-site/15067-1-fre-FR/Mairie-Domont-fermeture-services-municipaux-site.jpg" alt="Mairie" class="img-lieu">
+    <p class="conseil">Conseils d'accès : Juste à coté de l'église.</p>
+    <div class="map-container">
+        <!-- Google Maps intégré (remplacer l’adresse) -->
+         <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.1195871900613!2d2.321791991986549!3d49.027332514953294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e64284d896ba03%3A0x2529f1e0c75b53be!2sMairie%20de%20Domont!5e0!3m2!1sfr!2sfr!4v1776851855148!5m2!1sfr!2sfr"
+            width="100%" 
+            height="400" 
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
+<div id="domaine" class="lieu-content">
+    <h3>Le domaine des 3 voyages</h3>
+    <p class="adresse">Adresse : Domaine des 3 Voyages, 7 Rue de Pacy, 27640 Merey</p>
+    <img src="https://image.bridebook.com/weddingsuppliers/venue/frBXrBx9XZ/b45f611f-cd4c-407c-b124-66034f98b923.jpg/dpr=2,fit=cover,g=face,w=460,h=310" alt="Domaine" class="img-lieu">
+    <p class="conseil">Conseils d'accès : parking disponible sur place.</p>
+    <div class="map-container">
+        <!-- Google Maps intégré (remplacer l’adresse) -->
+         <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d335288.24231016746!2d0.7979679107665939!3d48.96415967667269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6b4bb0d9fd9bd%3A0xb11c1e3f29302a31!2sdomaine%20des%203%20voyages!5e0!3m2!1sfr!2sfr!4v1772550130853!5m2!1sfr!2sfr"
+            width="100%" 
+            height="400" 
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+
 </section>
 
 <!-- ===== 5. INFORMATIONS PRATIQUES ===== -->
 <section id="infos" class="section-purple">
-    <h2 class="countdown-title"> Informations pratiques</h2>
-    <p class="subtitles">Hébergements possible sur place, parkings, contact témoin, météo probable…🙏🏻🤞🏻</p>
-
+    <h2 class="countdown-title">Informations pratiques</h2>
     <h3>FAQ</h3>
+    <p class="subtitles">Tout ce qu'il faut savoir pour préparer votre venue</p>
 
-    <p><strong>Quelle est le thème ?</strong></p>
-    <p class="countdown-subtitle">Jardin d'été.</p>
-        <div class="color-palette">
-            <p>Palette suggérée (ATTENTION pas de blanc SVP) :</p>
-            <div class="swatches">
-                <div class="swatch color-1"></div>
-                <div class="swatch color-2"></div>
-                <div class="swatch color-3"></div>
-                <div class="swatch color-4"></div>
-                <div class="swatch color-5"></div>
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Quel est le thème et le dress code ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Le thème est <strong>"Jardin d'été"</strong> (Champêtre Chic). </p>
+                <div class="color-palette">
+                    <p>Palette suggérée (ATTENTION : pas de blanc SVP) :</p>
+                    <div class="swatches">
+                        <div class="swatch color-1"></div>
+                        <div class="swatch color-2"></div>
+                        <div class="swatch color-3"></div>
+                        <div class="swatch color-4"></div>
+                        <div class="swatch color-5"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-    <p><strong>Y a-t-il un parking ?</strong></p>
-    <p class="subtitles">Oui.</p>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Y a-t-il un parking sur place ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Oui, un parking est disponible gratuitement dans l'enceinte du domaine pour tous les invités.</p>
+            </div>
+        </div>
 
-    <p><strong>À quelle heure se termine la soirée ?</strong></p>
-    <p class="subtitles">23h59… Cendrillon oblige.</p>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Où peut-on loger ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Des hébergements sont possibles sur place (places limitées). Vous trouverez également un hôtel à seulement 8 minutes du domaine.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Les enfants sont-ils les bienvenus ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Absolument ! Une zone de jeux et une surveillance seront prévues pour que les petits et les grands profitent de la fête.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Quand devons-nous donner notre réponse ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Merci de nous confirmer votre présence avant le <strong>15 juin 2027</strong> via le formulaire en bas de page.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                À quelle heure se termine la soirée ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Jusqu'a épuisement, faut renta la salle. ✨<br> Fin de service des boissons à 00h00.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- ===== 6. MENU ===== -->
