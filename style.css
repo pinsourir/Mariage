@@ -10,9 +10,7 @@ body {
     text-align: center;
     scroll-behavior: smooth;
     overflow-x: hidden; /* CORRECTIF : Empêche le scroll horizontal */
-
 }
-
 
 /* CORRECTIF : Empêche les paddings de faire gonfler les boîtes */
 * {
@@ -328,29 +326,7 @@ section {
     font-size: 1rem;
 }
 
-
-
-
-/* ===== GALERIE ===== */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-
-
-
 /* ===== RSVP ===== */
-
 .rsvp {
     background-color: #f3e9ff; /* Un violet très pâle et élégant */
     color: #4b2e83; /* On met le texte en violet foncé pour qu'il soit bien lisible */
@@ -656,7 +632,6 @@ footer {
 .faq-item.active .faq-answer {
     max-height: 200px; /* Hauteur max de la réponse une fois ouverte */
 }
-
 
 /* ==========================================================
    CARROUSEL CIRCULAIRE (Notre Histoire)
