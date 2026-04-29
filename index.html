@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mariage - Alicia & Bruno</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mrs+Saint+Delafield&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- ===== BANDEAU NAVIGATION ===== --> 
@@ -152,26 +151,9 @@
 
     <!-- bouton des lieux -->
     <div class="lieu-selector">
-    <button class="tab-btn active" onclick="showLieu('eglise')">Église</button>
     <button class="tab-btn" onclick="showLieu('mairie')">Mairie</button>
+    <button class="tab-btn active" onclick="showLieu('eglise')">Église</button>
     <button class="tab-btn" onclick="showLieu('domaine')">Domaine</button>
-</div>
-
-<div id="eglise" class="lieu-content active">
-    <h3>Église Sainte Marie Madeleine</h3>
-    <p class="adresse">Adresse : 3 Place de l'Église, 95330 Domont</p>
-    <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/tuile-agenda-eglise/32654-1-fre-FR/TUILE-AGENDA-Eglise.jpg" alt="Église" class="img-lieu">
-    <p class="conseil">Conseils d'accès : parking disponible sur place.</p>
-    <div class="map-container">
-        <!-- Google Maps intégré (remplacer l’adresse) -->
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.144030631138!2d2.3260365999999997!3d49.026867599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e642854767df5b%3A0xcbfe2a3c98c53e3f!2s%C3%89glise%20Sainte%20Marie%20Madeleine!5e0!3m2!1sfr!2sfr!4v1776850216818!5m2!1sfr!2sfr" 
-            width="100%" 
-            height="400" 
-            style="border:0;"
-            loading="lazy">
-        </iframe>
-    </div>
 </div>
 
 <div id="mairie" class="lieu-content">
@@ -191,6 +173,23 @@
     </div>
 </div>
 
+<div id="eglise" class="lieu-content active">
+    <h3>Église Sainte Marie Madeleine</h3>
+    <p class="adresse">Adresse : 3 Place de l'Église, 95330 Domont</p>
+    <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/tuile-agenda-eglise/32654-1-fre-FR/TUILE-AGENDA-Eglise.jpg" alt="Église" class="img-lieu">
+    <p class="conseil">Conseils d'accès : parking disponible sur place.</p>
+    <div class="map-container">
+        <!-- Google Maps intégré (remplacer l’adresse) -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2616.144030631138!2d2.3260365999999997!3d49.026867599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e642854767df5b%3A0xcbfe2a3c98c53e3f!2s%C3%89glise%20Sainte%20Marie%20Madeleine!5e0!3m2!1sfr!2sfr!4v1776850216818!5m2!1sfr!2sfr" 
+            width="100%" 
+            height="400" 
+            style="border:0;"
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+    
 <div id="domaine" class="lieu-content">
     <h3>Le domaine des 3 voyages</h3>
     <p class="adresse">Adresse : Domaine des 3 Voyages, 7 Rue de Pacy, 27640 Merey</p>
@@ -318,7 +317,7 @@
 <!-- ===== 7. CONFIRMATION DE PRÉSENCE (GOOGLE FORM) ===== -->
 <section class="rsvp">
     <h2 class="countdown-title">Confirmation de présence</h2>
-    <p class="countdown-subtitle">Merci de respecter l'orde [NOM PRENOM].</p>
+    <p class="countdown-subtitle">Merci de respecter l'ordre [NOM PRENOM].</p>
 
     <!-- Google Form intégré -->
     <iframe 
