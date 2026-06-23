@@ -11,6 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Mrs+Saint+Delafield&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<div id="envelope-container">
+  <div class="envelope" id="envelope">
+    <div class="envelope-left"></div>
+    <div class="envelope-right"></div>
+    <div id="wax-seal">
+      <img src="image/cire.png" alt="Sceau de cire">
+      <svg class="curved-text-svg" viewBox="0 0 200 200">
+        <defs><path id="curvePath" d="M 35,125 A 65,65 0 0,0 165,125" /></defs>
+      </svg>
+    </div>
+  </div>
+</div>
+
 <!-- ===== BANDEAU NAVIGATION ===== --> 
 <nav class="navbar">
     <a href="#accueil" class="navbar-logo">
@@ -22,7 +36,6 @@
 
     <ul class="nav-links" id="nav-links">
         <li><a href="#Date">Date</a></li>
-        <li><a href="#histoire">Notre histoire</a></li>
         <li><a href="#programme">Déroulement</a></li>
         <li><a href="#lieux">Lieux</a></li>
         <li><a href="#infos">Infos</a></li>
@@ -73,28 +86,6 @@
     </div>
 </section>
     
-<!-- ===== 2. NOTRE HISTOIRE ===== -->
-<section id="histoire" class="section-white">
-    <h2 class="countdown-title">Notre histoire</h2>
-    <p class="countdown-subtitle">On a fait plein plein de truc!!!😌<br> dite moi quoi ecrire. svp</p>
-    <div class="histoire-cercle-container">
-    <div class="diaporama-cercle">
-        <div class="slide-histoire active">
-            <img src="https://www.ville-saintgratien.fr/medias/2021/04/lycee-monod-scaled.jpg" alt="Notre rencontre">
-        </div>
-        <div class="slide-histoire">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmkMERLtDBSKysAJFJ14BGrj26Fk7StxgMSg&s" alt="Premier voyage">
-        </div>
-        <div class="slide-histoire">
-            <img src="image/eux1.jpg" alt="La demande">
-        </div>
-
-        <button class="prev-histoire" onclick="changeSlide(-1)">&#10094;</button>
-        <button class="next-histoire" onclick="changeSlide(1)">&#10095;</button>
-    </div>
-</div>
-</section>
-
 <!-- ===== 3. PROGRAMME (TIMELINE VERTICALE) ===== -->
 <section id="programme" class="section-purple">
     <h2 class="countdown-title">Programme du mariage</h2>
@@ -156,7 +147,7 @@
     <button class="tab-btn" onclick="showLieu('domaine')">Domaine</button>
 </div>
 
-<div id="mairie" class="lieu-content">
+<div id="mairie" class="lieu-content active">
     <h3>Mairie de Domont</h3>
     <p class="adresse">Adresse : 47 Rue de la Mairie, 95330 Domont</p>
     <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/mairie-domont-fermeture-services-municipaux-site/15067-1-fre-FR/Mairie-Domont-fermeture-services-municipaux-site.jpg" alt="Mairie" class="img-lieu">
@@ -173,7 +164,7 @@
     </div>
 </div>
 
-<div id="eglise" class="lieu-content active">
+<div id="eglise" class="lieu-content">
     <h3>Église Sainte Marie Madeleine</h3>
     <p class="adresse">Adresse : 3 Place de l'Église, 95330 Domont</p>
     <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/tuile-agenda-eglise/32654-1-fre-FR/TUILE-AGENDA-Eglise.jpg" alt="Église" class="img-lieu">
@@ -347,7 +338,7 @@
 
     <!-- Bouton futur téléchargement -->
     <!--ou alors au lieu d'un zip je fait un GG drive-->
-    <a href="photos-mariage.zip" class="btn">Télécharger les photos (après le mariage, parce que pendant je serai en train de manger😂)</a>
+    <a href="photos-mariage.zip" class="btn">Télécharger les photos </a>
 </section>
 <footer>
     <p>© 2027 Alicia & Bruno</p>
