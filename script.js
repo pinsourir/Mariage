@@ -118,27 +118,34 @@ function toggleFAQ(button) {
     item.classList.toggle('active');
 }
 
-// ========= carousel notre histoire  ==========
-// ========= Nouveau CAROUSEL CERCLE (Histoire) ==========
-let indexHistoire = 0;
+// ==========================================================
+// GESTION DE L'OUVERTURE DE L'ENVELOPPE AU CLIC
+// ==========================================================
 
-function changeSlide(direction) {
-    const slides = document.querySelectorAll('.slide-histoire'); // On cible les slides du cercle
+//  Écouteur de clic sur le cachet de cire
+document.getElementById('wax-seal').addEventListener('click', () => {
+  const container = document.getElementById('envelope-container');
+  
+  // Déclenche l'écartement des volets blancs en CSS
+  document.getElementById('envelope').classList.add('opened');
+  container.classList.add('opened');
+  
+  // Fait disparaître immédiatement le bouton du cachet
+  document.getElementById('wax-seal').style.display = 'none';
+
+  // Fait disparaître proprement tout le conteneur en fondu
+  setTimeout(() => {
+    container.style.opacity = '0';
     
-    // On cache la slide actuelle
-    slides[indexHistoire].classList.remove('active');
-    
-    // On calcule le nouvel index
-    indexHistoire += direction;
+    // Une fois invisible, on le retire totalement de l'écran pour pouvoir cliquer sur le site
+    setTimeout(() => { 
+        container.style.display = 'none'; 
+        document.body.style.overflow = 'auto'; // Réactive le scroll du site
+    }, 1200);
+  }, 2200);
+});
 
-    if (indexHistoire >= slides.length) {
-        indexHistoire = 0;
-    } else if (indexHistoire < 0) {
-        indexHistoire = slides.length - 1;
-    }
-
-    // On affiche la nouvelle slide
-    slides[indexHistoire].classList.add('active');
-}
-// Fait tourner le cercle automatiquement toutes les 5 secondes
-setInterval(() => changeSlide(1), 5000);
+// Affiche le texte du cachet dès que les polices d'écriture sont prêtes
+document.fonts.ready.then(() => {
+  document.querySelector('.curved-text-svg').style.opacity = '1';
+});
