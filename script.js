@@ -65,7 +65,7 @@ hamburger.onclick = function() {
 }
 
 // Ferme le menu si on clique sur un lien (pratique sur tel)
-document.querySelectorAll('.nav-links a').forEach(link => {
+document.querySelectorAll('.nav-links a, .navbar-logo').forEach(link => {
     link.onclick = () => {
         navLinks.classList.remove("open");
     };
@@ -109,11 +109,11 @@ function toggleFAQ(button) {
     const item = button.parentElement;
     
     // Optionnel : ferme les autres questions ouvertes
-    /*
+    
     document.querySelectorAll('.faq-item').forEach(otherItem => {
         if (otherItem !== item) otherItem.classList.remove('active');
     });
-    */
+    
 
     item.classList.toggle('active');
 }
@@ -145,7 +145,4 @@ document.getElementById('wax-seal').addEventListener('click', () => {
   }, 2200);
 });
 
-// Affiche le texte du cachet dès que les polices d'écriture sont prêtes
-document.fonts.ready.then(() => {
-  document.querySelector('.curved-text-svg').style.opacity = '1';
-});
+
