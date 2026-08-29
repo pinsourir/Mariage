@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding-top: 0px;
     font-family: 'Playfair Display', serif; /* Police chic par défaut */
-    background-color: #f5fff6;
+    background: url('image/fond.jpg') repeat; 
     color: #333;
     text-align: center;
     scroll-behavior: smooth;
