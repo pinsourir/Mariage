@@ -84,7 +84,23 @@ p {
     color: #5c4b38;
 
 }
-
+.doree {
+    /* ==========EFFET OR LUMINEUX =================== */
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 15%, #d1b464 40%, #D8B24A 70%, transparent 95%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFD0 10%, #D1B464 35%, #C2A145 75%, #A6852C 100%);
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+        
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+        
+    /* Ombre adoucie pour préserver la clarté maximale du texte */
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.1));
+        
+    display: inline-block;
+}
+    
 /* ==========================================================
    2. LA NAVIGATION (Rétablie comme avant)
    ========================================================== */
@@ -196,6 +212,7 @@ p {
     white-space: nowrap;        /* Interdit formellement le retour à la ligne */
     margin: 0 0 200px 0;         /* Espace sous le titre */
 }
+    
 /* Pour les grands titres romantiques (ex: Alicia & Bruno) */
 .heros h1 {
    font-family: "Mrs Saint Delafield", cursive;
@@ -727,7 +744,7 @@ footer {
         font-family: "Mrs Saint Delafield", cursive;
         font-weight: 400;
         font-style: normal;
-        font-size: 5.5rem;          /* Taille réduite pour bien tenir dans le cadre */
+        font-size: 4.5rem;          /* Taille réduite pour bien tenir dans le cadre */
         color: rgb(0, 0, 0);               /* Blanc comme sur l'image exemple */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         
@@ -814,4 +831,5 @@ footer {
   filter: drop-shadow(0 10px 20px rgba(0,0,0,0.25));
   pointer-events: none;
 }
+
 
