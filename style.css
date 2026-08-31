@@ -26,9 +26,9 @@ h2 {
     font-style: italic;
     font-weight: 600;
     /* ==========EFFET OR LUMINEUX =================== */
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FFF3A7 0%, #FFE259 20%, #F3D062 50%, #D8B24A 75%, transparent 95%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFE0 15%, #E9D082 45%, #C2A145 80%, #A6852C 100%);
-    
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 15%, #d1b464 40%, #D8B24A 70%, transparent 95%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFD0 10%, #D1B464 35%, #C2A145 75%, #A6852C 100%);
+   
     -webkit-background-clip: text;
     background-clip: text;
     
