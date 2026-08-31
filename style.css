@@ -185,12 +185,13 @@ p {
     border-radius: 10px; /* Petit cadre arrondi sur PC */
 }
 /* Pour les grands titres romantiques (ex: Alicia & Bruno) */
-.hero h1 {
+.heros h1 {
    font-family: "Mrs Saint Delafield", cursive;
    font-weight: 400;
    font-style: normal;
-   font-size: 6rem; /* On l'agrandit car les polices cursives paraissent plus petites */
-   color: white;
+   font-size: 6.5rem; /* On l'agrandit car les polices cursives paraissent plus petites */
+   margin-top: 230px;
+   color: rgb(0, 0, 0);
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Un léger ombre pour la lisibilité */
 }
 
@@ -691,11 +692,6 @@ footer {
 
     .timeline-item h3 {
         font-size: 1.15rem; /* On réduit un peu le titre pour mobile */
-    }
-
-     /*CORRECTIF : Réduit le titre Alicia & Bruno pour qu'il tienne sur tel */
-    .hero h1 {
-        font-size: 6rem; 
     }
 
     .carousel-slide img {
