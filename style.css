@@ -201,7 +201,7 @@ p {
     border-radius: 10px; /* Petit cadre arrondi sur PC */
 }
 .overlay h1 {
-    font-family: "Mrs Saint Delafield", cursive;
+    font-family: "Ephesis", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 4.8rem;          /* Taille réduite pour bien tenir dans le cadre */
@@ -215,7 +215,7 @@ p {
     
 /* Pour les grands titres romantiques (ex: Alicia & Bruno) */
 .heros h1 {
-   font-family: "Mrs Saint Delafield", cursive;
+   font-family: "Ephesis", cursive;
    font-weight: 400;
    font-style: normal;
    font-size: 6.5rem; /* On l'agrandit car les polices cursives paraissent plus petites */
@@ -741,7 +741,7 @@ footer {
 
     /* Le Titre h1 forcé sur une seule ligne */
     .overlay h1 {
-        font-family: "Mrs Saint Delafield", cursive;
+        font-family: "Ephesis", cursive;
         font-weight: 400;
         font-style: normal;
         font-size: 4.5rem;          /* Taille réduite pour bien tenir dans le cadre */
