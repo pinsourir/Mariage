@@ -190,7 +190,6 @@ p {
    font-weight: 400;
    font-style: normal;
    font-size: 6.5rem; /* On l'agrandit car les polices cursives paraissent plus petites */
-   margin-top: 230px;
    color: rgb(0, 0, 0);
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Un léger ombre pour la lisibilité */
 }
