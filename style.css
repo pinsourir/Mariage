@@ -514,7 +514,7 @@ footer {
     gap: 20px;
     text-align: left;
     /* On force le chevauchement vertical */
-    margin-top: -25px; /* imgage rapprocher */
+    margin-top: -15px; /* imgage rapprocher */
 }
 
 /* Alternance : 1 ligne sur 2 inverse l'ordre (image à droite) */
