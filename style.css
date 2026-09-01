@@ -64,6 +64,10 @@ p {
     margin-bottom: 10px;
     line-height: 1.6;
 }
+}
+.bas {
+    margin-top: 170px;
+}
 
 /* Cas particulier pour le Menu (ton image) */
 #menu p {
