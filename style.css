@@ -495,6 +495,44 @@ footer {
 .color-5 { background: radial-gradient(circle farthest-corner at 35% 35%, #FFFFFF 0%, #FFFFD0 15%, #D1B464 55%, #7a6021 100%); }
 
 /* ==========================================================
+   Témoins dans la FAQ
+   ========================================================== */
+.temoins-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+}
+.temoin-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+/* Alternance : 1 ligne sur 2 inverse l'ordre (image à droite) */
+.temoin-row:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+.temoin-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.temoin-desc {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+/* IMPORTANT : On augmente la hauteur max de la FAQ pour tout afficher */
+.faq-item.active .faq-answer {
+    max-height: 800px !important; 
+}
+    
+/* ==========================================================
    lieux
    ========================================================== */
 /* Cache les contenus par défaut */
