@@ -782,7 +782,7 @@ footer {
         font-family: "Ephesis", cursive;
         font-weight: 400;
         font-style: normal;
-        font-size: 4.5rem;          /* Taille réduite pour bien tenir dans le cadre */
+        font-size: 3.8rem;          /* Taille réduite pour bien tenir dans le cadre */
         color: rgb(0, 0, 0);               /* Blanc comme sur l'image exemple */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
         
