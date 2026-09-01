@@ -532,12 +532,6 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.temoin-desc {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 0;
-}
-
 /* IMPORTANT : On augmente la hauteur max de la FAQ pour tout afficher */
 .faq-item.active .faq-answer {
     max-height: 800px !important; 
