@@ -235,9 +235,8 @@ p {
    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Un léger ombre pour la lisibilité */
 }
 
-
 .date {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     margin-top: 10px;
 }
 
@@ -487,10 +486,10 @@ footer {
 .swatches {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espace entre les pastilles */
+    gap: 5px; /* Espace entre les pastilles */
     flex-wrap: wrap;     /* Permet le saut à la ligne automatique */
     max-width: 320px;    /* Force les pastilles à former 2 lignes équilibrées (4 par 4) sur mobile */
-    margin: 0 auto;   /* Recentre tout le bloc de pastilles */
+    margin: 0 auto; 
 }
 
 .swatch {
@@ -499,12 +498,25 @@ footer {
     border-radius: 50%; /* Rend la pastille ronde */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petit relief classe */
     border: 2px solid white; /* Contour blanc pour détacher du fond */
-    transition: transform 0.2s ease; /* Petit effet interactif */
 }
 
-/* Optionnel : petit zoom quand on passe la souris ou qu'on clique */
-.swatch:hover {
-    transform: scale(1.1);
+/* Le bloc individuel (Rond + Nom) */
+.color-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;           /* Largeur fixe pour aligner le texte sous le rond */
+}
+/* Le titre sous la couleur */
+.color-name {
+    display: block;
+    font-size: 0.62rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
+    text-align: center;
+    margin-top: 6px;
+    text-transform: uppercase;
 }
 
 /* Les couleurs du theme */
@@ -516,6 +528,21 @@ footer {
 .color-6 { background-color: #EBCDC6; } /* rose-poudre */
 .color-7 { background-color: #D4A09B; } /* vieux-rose*/
 .color-8 { background-color: #B7BCAE; } /* vert-eucalyptus */
+
+/* Adaptation Mobile : réduit la taille pour tout faire tenir proprement */
+@media (max-width: 600px) {
+    .color-card {
+        width: 60px;
+    }
+    .swatch {
+        width: 48px;
+        height: 48px;
+    }
+    .color-name { 
+        font-size: 0.55rem; 
+    }
+}
+
 /* ==========================================================
    Témoins dans la FAQ
    ========================================================== */
