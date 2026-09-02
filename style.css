@@ -491,13 +491,15 @@ footer {
     border: 2px solid white; /* Contour blanc pour détacher du fond */
 }
 
-/* Les 4 couleurs extraites de ton image */
-.color-1 { background-color: #285730; } /* Vert Mousse Profond (Le plus haut) */
-.color-2 { background-color: #9fc7a6; } /* Vert Sauge Pâle */
-.color-3 { background-color: #785936; } /* marron */
-.color-4 { background-color: #fceae8; } /* Le rose le plus clair, comme ton fond */
-.color-5 { background: radial-gradient(circle farthest-corner at 35% 35%, #FFFFFF 0%, #FFFFD0 15%, #D1B464 55%, #7a6021 100%); }
-
+/* Les couleurs du theme */
+.color-1 { background-color: #7A846E; } /* vert-sauge */
+.color-2 { background-color: #5E6652; } /* vert-olive */
+.color-3 { background-color: #C47A5A; } /* terracotta */
+.color-4 { background-color: #7A5B45; } /* mocha */
+.color-5 { background-color: #4A3326; } /* chocolat */
+.color-6 { background-color: #EBCDC6; } /* rose-poudre */
+.color-7 { background-color: #D4A09B; } /* vieux-rose*/
+.color-8 { background-color: #B7BCAE; } /* vert-eucalyptus */
 /* ==========================================================
    Témoins dans la FAQ
    ========================================================== */
