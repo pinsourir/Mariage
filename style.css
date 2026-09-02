@@ -479,8 +479,10 @@ footer {
 .swatches {
     display: flex;
     justify-content: center;
-    gap: 12px; /* Espace entre les pastilles */
-    flex-wrap: wrap;
+    gap: 15px; /* Espace entre les pastilles */
+    flex-wrap: wrap;     /* Permet le saut à la ligne automatique */
+    max-width: 320px;    /* Force les pastilles à former 2 lignes équilibrées (4 par 4) sur mobile */
+    margin: 0 auto;   /* Recentre tout le bloc de pastilles */
 }
 
 .swatch {
@@ -489,6 +491,12 @@ footer {
     border-radius: 50%; /* Rend la pastille ronde */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Petit relief classe */
     border: 2px solid white; /* Contour blanc pour détacher du fond */
+    transition: transform 0.2s ease; /* Petit effet interactif */
+}
+
+/* Optionnel : petit zoom quand on passe la souris ou qu'on clique */
+.swatch:hover {
+    transform: scale(1.1);
 }
 
 /* Les couleurs du theme */
