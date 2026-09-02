@@ -61,11 +61,7 @@ h3 {
     color: #5c4b38;
     margin-bottom: 30px;
     font-style: italic;
-}
-/* Pour les sous-titres élégants */
- .subtitle {
-    font-style: italic;
-    font-w eight: 600;
+    font-size: 1.1rem;
 }
 
 p {
