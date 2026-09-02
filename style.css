@@ -927,7 +927,7 @@ footer {
 
 .scroll-down-arrow {
     position: absolute;
-    bottom: 25px;            /* Hauteur depuis le bas */
+    bottom: 35px;            /* Hauteur depuis le bas */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -941,8 +941,8 @@ footer {
 /* Style des deux branches du chevron */
 .scroll-down-arrow span {
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 28px;
+    height: 28px;
     border-bottom: 2.5px solid #ffffff;
     border-right: 2.5px solid #ffffff;
     transform: rotate(45deg);
@@ -968,4 +968,5 @@ footer {
         opacity: 0;
         transform: rotate(45deg) translate(8px, 8px);
     }
+}
 }
