@@ -19,13 +19,12 @@ body {
 }
 h1 {
     font-family: "Ephesis", cursive;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 2.8rem;
-        margin-top: -10px;
-        background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 15%, #d1b464 40%, #a88939 70%, transparent 95%),
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.8rem;
+    margin-top: -10px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 15%, #d1b464 40%, #a88939 70%, transparent 95%),
                 radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFD0 10%, #D1B464 35%, #91752b 75%, #7a6021 100%);
-        
 }
 /* Espacement automatique pour tous les titres (Original conservé) */
 h2 {
