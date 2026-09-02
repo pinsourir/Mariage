@@ -18,9 +18,8 @@
     <div class="envelope-right"></div>
     <div id="wax-seal">
     <div class="overlay">
-        <h1 class="doree">Alicia & Bruno</h1> <!--j'ai ajouter des classe animation on enleve si c'est nul-->
-        <p class="doree">Se disent oui</p>
-        <p class="date doree">Invitation</p>
+        <h1 class="doree bas">Alicia & Bruno</h1> 
+        <p class="date doree">Se disent oui</p>
     </div>
       <img src="image/cire.png" alt="Sceau de cire">
       <svg class="curved-text-svg" viewBox="0 0 200 200">
@@ -66,7 +65,7 @@
 <!-- ===== COMPTE À REBOURS LUXE ===== -->
 <section id="Date" class="countdown-luxe">
     <h2 class="texte-dore">Jeudi 26 Août 2027</h2>
-    <p class="subtitles">Nous avons hâte de célébrer ce moment avec vous</p>
+    <p class="subtitles">Nous avons hâte de célébrer ce moment avec vous !</p>
 
     <div id="countdown" class="countdown-container">
         <div class="time-box">
@@ -136,7 +135,7 @@
     </div> 
 </section>
 <!-- ===== 4. LES LIEUX ===== -->
-<section id="lieux" class="section-white">
+<section id="lieux" class="section-white" style="margin-top: -50px;">
     <h2>Les lieux</h2>
     
 
@@ -150,7 +149,7 @@
     <h3>Église Sainte Marie Madeleine</h3>
     <p>Adresse : 3 Place de l'Église, 95330 Domont</p>
     <img src="https://www.ville-domont.fr/var/www/storage/images/mediatheque/ville-de-domont/images/agenda/tuile-agenda-eglise/32654-1-fre-FR/TUILE-AGENDA-Eglise.jpg" alt="Église" class="img-lieu">
-    <p>Conseils d'accès : Grand parking à proximité</p>
+    <p>Conseil d'accès : Grand parking à proximité</p>
     <div class="map-container">
         <!-- Google Maps intégré (remplacer l’adresse) -->
         <iframe 
@@ -167,7 +166,7 @@
     <h3>Le domaine des 3 voyages</h3>
     <p>Adresse : Domaine des 3 Voyages, 7 Rue de Pacy, 27640 Merey</p>
     <img src="https://cdn0.mariages.net/vendor/7976/3_2/960/jpg/gt-7_3_157976-177608988917622.jpeg" alt="Domaine" class="img-lieu">
-    <p>Conseils d'accès : parking disponible sur place.</p>
+    <p>Conseil d'accès : parking disponible sur place.</p>
     <div class="map-container">
         <!-- Google Maps intégré (remplacer l’adresse) -->
          <iframe 
@@ -195,19 +194,58 @@
                 <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
-                <p class="subtitles">Le theme de la palette</p>
+                <p class="subtitles">Le thème de la palette</p>
                 <h1 class="doree">"Nature, méditerranéen et romantique"</h1>
                 <div class="color-palette">
                     <p>Palette suggérée (ATTENTION : pas de blanc SVP) :</p>
                     <div class="swatches">
-                        <div class="swatch color-1"></div>
-                        <div class="swatch color-2"></div>
-                        <div class="swatch color-3"></div>
-                        <div class="swatch color-4"></div>
-                        <div class="swatch color-5"></div>
-                        <div class="swatch color-6"></div>
-                        <div class="swatch color-7"></div>
-                        <div class="swatch color-8"></div>
+                        <!-- Couleur 1 -->
+                        <div class="color-card">
+                            <div class="swatch color-1"></div>
+                            <span class="color-name">VERT SAUGE</span>
+                        </div>
+
+                        <!-- Couleur 2 -->
+                        <div class="color-card">
+                            <div class="swatch color-2"></div>
+                            <span class="color-name">VERT OLIVE</span>
+                        </div>
+
+                        <!-- Couleur 3 -->
+                        <div class="color-card">
+                            <div class="swatch color-3"></div>
+                            <span class="color-name">TERRACOTTA</span>
+                        </div>
+
+                        <!-- Couleur 4 -->
+                        <div class="color-card">
+                            <div class="swatch color-4"></div>
+                            <span class="color-name">MOCHA</span>
+                        </div>
+
+                        <!-- Couleur 5 -->
+                        <div class="color-card">
+                            <div class="swatch color-5"></div>
+                            <span class="color-name">CHOCOLAT</span>
+                        </div>
+
+                        <!-- Couleur 6 -->
+                        <div class="color-card">
+                            <div class="swatch color-6"></div>
+                            <span class="color-name">ROSE POUDRÉ</span>
+                        </div>
+
+                        <!-- Couleur 7 -->
+                        <div class="color-card">
+                            <div class="swatch color-7"></div>
+                            <span class="color-name">VIEUX ROSE</span>
+                        </div>
+
+                        <!-- Couleur 8 -->
+                        <div class="color-card">
+                            <div class="swatch color-8"></div>
+                            <span class="color-name">EUCALYPTUS</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -219,7 +257,7 @@
                 <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
-                <p>Oui, un parking est disponible gratuitement dans l'enceinte du domaine pour tous les invités.</p>
+                <p>"Oui, un parking est disponible gratuitement à côté de l'église ainsi que dans l'enceinte du domaine pour tous les invités.</p>
             </div>
         </div>
 
@@ -229,37 +267,38 @@
                 <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
-                <p>L' hôtel le plus proche est à seulement 8 minutes du domaine.<br>(noms, temps de trajet et liens à venir).</p>
+                <p>L' hôtel le plus proche est à seulement 8 minutes du domaine.</p>
+                <a href="Les hébergements à proximité du domaine.pdf" class="btn" target="_blank" rel="noopener noreferrer">Les hébergements à proximité du domaine</a>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question" onclick="toggleFAQ(this)">
-                Contact des temoins ?
+                Qui contacter pour faire une surprise aux mariés ?
                 <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
-                <p>Pour toute question d'organisation de discour ou autre surprise pour les mariés vous pouvez contacter les témoins.</p>
+                <p>Pour toute demande de discours, surprises etc. Merci de contacter les témoins :</p>
                 
                 <div class="temoins-grid">
                     <div class="temoin-row">
                         <img src="image/temoin1.jpeg" alt="Témoin" class="temoin-img">
-                        <p>Je vais pas assumer quand je vais devoir chauffer la salle</p>
+                        <p>06 65 23 64 68</p>
                     </div>
                     
                     <div class="temoin-row">
                         <img src="image/temoin2.jpeg" alt="Témoin" class="temoin-img">
-                        <p>Je suis la cheffe projet et je le sais</p>
+                        <p>06 58 69 11 85</p>
                     </div>
                     
                     <div class="temoin-row">
                         <img src="image/temoin3.jpeg" alt="Témoin" class="temoin-img">
-                        <p>Je fais super amicale et sociale mais c'est une supercherie</p>
+                        <p>17</p>
                     </div>
                     
                     <div class="temoin-row">
                         <img src="image/temoin4.jpeg" alt="Témoin" class="temoin-img">
-                        <p>Moi je suis hic vraiment hic social</p>
+                        <p>06 66 95 25 35</p>
                     </div>
                 </div>
             </div>
@@ -271,13 +310,27 @@
                 <span class="faq-icon"></span>
             </button>
             <div class="faq-answer">
-                <p>Merci de nous confirmer votre présence avant le <strong>Lundi 31 mars 2027</strong> via le formulaire en bas de page.</p>
+                <p>Merci de nous confirmer ou non votre présence avant le <strong>Lundi 31 mars 2027</strong> via le formulaire ci-dessous.</p>
             </div>
         </div>
     </div>
 </section>
+    
+<!-- ===== 6. CONFIRMATION DE PRÉSENCE (GOOGLE FORM) ===== -->
+<section id="rsvp" class="rsvp, section-white">
+    <h2>Réponse</h2>
+    <p>Merci de nous indiquer votre présence avant le <strong>Lundi 31 Mars 2027</strong>.</p>
+    
+    <p class="subtitles">Afin de nous aider dans l'organisation de cette belle journée, merci de remplir notre formulaire en cliquant sur le bouton ci-dessous :</p>
+    
+    <div class="rsvp-button-container">
+        <a href="https://forms.gle/u1KdwEesiRUDNqQv5" target="_blank" class="btn btn-rsvp">
+            Donner ma réponse
+        </a>
+    </div>
+</section>
 
-<!-- ===== 6. MENU ===== -->
+<!-- ===== 7. MENU ===== -->
 <section id="menu" class="section-decoree">
     <h2>Le Menu</h2>
 
@@ -300,21 +353,6 @@
          <p>Les degustations non pas encore eu lieu, une mise a jours du site sera faite lorsque le menu sera desidé.</p>
         
     </div>
-</section>
-    
-<!-- ===== 7. CONFIRMATION DE PRÉSENCE (GOOGLE FORM) ===== -->
-<section id="rsvp" class="rsvp, section-white">
-    <h2>Donner une réponse</h2>
-    <p>Merci de nous indiquer votre présence avant le <strong>Lundi 31 Mars 2027</strong>.</p>
-    
-    <p class="subtitles">Afin de nous aider dans l'organisation de cette belle journée, merci de remplir notre formulaire en cliquant sur le bouton ci-dessous :</p>
-    
-    <div class="rsvp-button-container">
-        <a href="https://forms.gle/u1KdwEesiRUDNqQv5" target="_blank" class="btn btn-rsvp">
-            Confirmer ma présence
-        </a>
-    </div>
-    
 </section>
 
 <!-- ===== 8. GALERIE PHOTOS ===== -->
