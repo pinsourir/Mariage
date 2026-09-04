@@ -824,7 +824,7 @@ footer {
         
         /* PROPRIÉTÉS CLÉS POUR LA SEULE LIGNE */
         white-space: nowrap;        /* Interdit formellement le retour à la ligne */
-        margin: 200px 0 230px 0;         /* Espace sous le titre */
+        margin: 200px 0 200px 0;         /* Espace sous le titre */
     }
 }
 
