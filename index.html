@@ -19,7 +19,7 @@
     <div id="wax-seal">
     <div class="overlay">
         <h1 class="doree">Alicia & Bruno</h1> 
-        <h1 class="doree" style="margin-top: 10px;">Se disent oui</h1>
+        <h1 class="doree" style="margin-top: 10px;">se disent oui ...</h1>
     </div>
       <img src="image/cire.png" alt="Sceau de cire">
       <svg class="curved-text-svg" viewBox="0 0 200 200">
@@ -53,7 +53,7 @@
 <!-- ===== 1. PAGE D’ACCUEIL ===== -->
 <header id="accueil" class="hero">
     <div class="overlay">
-        <p style="margin-top: 350px;">L'amour est le plus beau des voyages ...</p>
+        <p style="margin-top: 380px;">L'amour est le plus beau des voyages ...</p>
         <!-- Boutons navigation interne -->
        <!-- <div class="hero-buttons">
             <a href="#lieux" class="btn">Lieu</a>
@@ -97,6 +97,7 @@
 <!-- ===== 3. PROGRAMME (TIMELINE VERTICALE) ===== -->
 <section id="programme" class="section-white">
     <h2>Programme du mariage</h2>
+    <p>Nous souhaitons une céremonie déconnectée, merci de profiter de celle-ci sans votre téléphone.</p>
     
     <div class="timeline">
         <div class="timeline-item">
@@ -316,6 +317,15 @@
                 <p>Merci de nous confirmer ou non votre présence avant le <strong>lundi 31 mars 2027</strong> via le formulaire ci-dessous.</p>
             </div>
         </div>
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+                Quelle cadeau pour les mariés ?
+                <span class="faq-icon"></span>
+            </button>
+            <div class="faq-answer">
+                <p>Nous souhaitons de la grosse moula !!!</p>
+            </div>
+        </div>
     </div>
 </section>
     
@@ -327,7 +337,7 @@
     <p class="subtitles">Afin de nous aider dans l'organisation de cette belle journée, merci de remplir notre formulaire en cliquant sur le bouton ci-dessous :</p>
     
     <div class="rsvp-button-container">
-        <a href="https://forms.gle/u1KdwEesiRUDNqQv5" target="_blank" class="btn btn-rsvp">
+        <a href="https://docs.google.com/forms/d/1sL5LEKWLXfzjtaQBW5yzTF8gVy2jNHZToONbQ1WvivQ/edit?ts=6a9ad01a&pli=1" target="_blank" class="btn btn-rsvp">
             Donner ma réponse
         </a>
     </div>
@@ -359,38 +369,7 @@
 </section>
 
 <!-- ===== 8. GALERIE PHOTOS ===== -->
-<section id="galerie" class="section-white">
-    <h2>Galerie photos</h2>
-        <div class="carousel-wrapper">
-        <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-        
-        <div class="carousel-container" id="carousel">
-            <div class="carousel-slide">
-                <img src="images/photo (1).jpg" alt="Préparation 1">
-                <img src="images/photo (2).jpg" alt="Préparation 2">
-                <img src="images/photo (3).jpg" alt="Préparation 3">
-                <img src="images/photo (4).jpg" alt="Préparation 4">
-                <img src="images/photo (5).jpg" alt="Préparation 5">
-                <img src="images/photo (6).jpg" alt="Préparation 6">
-                <img src="images/photo (7).jpg" alt="Préparation 7">
-                <img src="images/photo (8).jpg" alt="Préparation 8">
-                <img src="images/photo (9).jpg" alt="Préparation 9">
-                <img src="images/photo (10).jpg" alt="Préparation 10">
-                <img src="images/photo (11).jpg" alt="Préparation 11">
-                <img src="images/photo (12).jpg" alt="Préparation 12">
-                <img src="images/photo (13).jpg" alt="Préparation 13">
-                <img src="images/photo (14).jpg" alt="Préparation 14">
-                <img src="images/photo (15).jpg" alt="Préparation 15">
-            </div>
-        </div>
 
-        <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-
-    <!-- Bouton futur téléchargement -->
-    <!--ou alors au lieu d'un zip je fait un GG drive-->
-    <a href="photos-mariage.zip" class="btn">Télécharger les photos </a>
-</section>
 <footer>
     <p>© 2027 Alicia & Bruno</p>
 </footer>
