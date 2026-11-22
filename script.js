@@ -70,6 +70,8 @@ document.querySelectorAll('.nav-links a, .navbar-logo').forEach(link => {
         navLinks.classList.remove("open");
     };
 });
+
+// ========= CAROUSEL AUTOMATIQUE & DOTS ==========
 let currentIndex = 0;
 let autoSlideInterval;
 
