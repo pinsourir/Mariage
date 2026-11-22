@@ -107,15 +107,29 @@ function showLieu(idLieu) {
 // ========= à la google  ==========
 function toggleFAQ(button) {
     const item = button.parentElement;
+    const isAlreadyOpen = item.classList.contains('active');
     
-    // Optionnel : ferme les autres questions ouvertes
-    
+    // 1. Ferme toutes les questions ouvertes
     document.querySelectorAll('.faq-item').forEach(otherItem => {
-        if (otherItem !== item) otherItem.classList.remove('active');
+        otherItem.classList.remove('active');
     });
-    
 
-    item.classList.toggle('active');
+    // 2. Si la question cliquée n'était pas déjà ouverte, on l'ouvre et on recentre l'écran
+    if (!isAlreadyOpen) {
+        item.classList.add('active');
+
+        // On attend 350ms (le temps que la question du dessus se referme)
+        setTimeout(() => {
+            const navbarHeight = 95; // Marge pour ne pas que le logo AB / menu cache la question
+            const elementPosition = item.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - navbarHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }, 350);
+    }
 }
 
 // ==========================================================
